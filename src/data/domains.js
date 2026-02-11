@@ -411,18 +411,18 @@ export const workshopInfo = {
   presentedBy: 'cg42',
   presenters: [
     {
-      name: 'Hugh',
-      role: 'Presenter',
-      image: '/images/hugh.jpg', // Place headshot at public/images/hugh.jpg
+      name: 'Hugh Tallents',
+      role: 'Senior Partner',
+      image: '/images/hugh.jpg',
     },
     {
-      name: 'Evan',
-      role: 'Presenter',
-      image: '/images/evan.jpg', // Place headshot at public/images/evan.jpg
+      name: 'Evan Duval',
+      role: 'Senior Consultant',
+      image: '/images/evan.jpg',
     },
     {
-      name: 'Shaun',
-      role: 'Presenter',
+      name: 'Shaun Mascarenhas',
+      role: 'Senior Consultant',
       image: '/images/shaun.jpg',
     },
   ],
