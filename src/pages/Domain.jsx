@@ -149,11 +149,11 @@ function FactorsSlide({ domain }) {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 + i * 0.1 }}
-              className="group flex items-stretch border-t border-white/[0.06] last:border-b"
+              className="group flex items-center border-t border-white/[0.06] last:border-b"
             >
               {/* Left: factor name & description */}
               <div className="flex-1 py-6 pr-8">
-                <h3 className="font-heading font-semibold text-white/90 text-lg mb-1.5">
+                <h3 className="font-heading font-semibold text-white/90 text-xl truncate mb-1.5">
                   {factor.name}
                 </h3>
                 <p className="text-white/40 text-sm leading-relaxed">
@@ -163,7 +163,7 @@ function FactorsSlide({ domain }) {
 
               {/* Right: stat block */}
               <div
-                className="w-48 md:w-64 flex-shrink-0 flex flex-col justify-center py-6 pl-8 border-l border-white/[0.06]"
+                className="w-48 md:w-64 flex-shrink-0 flex flex-col items-center justify-center py-6 pl-8 border-l border-white/[0.06]"
               >
                 <span
                   className="font-heading text-3xl md:text-4xl font-bold leading-none"
@@ -171,7 +171,7 @@ function FactorsSlide({ domain }) {
                 >
                   {factor.stat}
                 </span>
-                <p className="text-white/35 text-xs mt-2 leading-snug">
+                <p className="text-white/35 text-xs mt-2 leading-snug text-center">
                   {factor.statLabel}
                 </p>
               </div>
