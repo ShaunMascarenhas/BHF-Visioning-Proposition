@@ -164,7 +164,7 @@ export default function Landing() {
                     <img
                       src={presenter.image}
                       alt={presenter.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale"
                     />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-electric-cyan/20 to-vivid-purple/20 flex items-center justify-center">
