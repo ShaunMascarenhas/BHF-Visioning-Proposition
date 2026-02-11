@@ -9,7 +9,6 @@ import {
   Heart,
   Target,
   ExternalLink,
-  Lightbulb,
   BarChart3,
   Newspaper,
   Building2,
@@ -30,73 +29,96 @@ function OverviewSlide({ domain }) {
   const Icon = iconMap[domain.icon] || Users
 
   return (
-    <div className="h-full flex items-center justify-center px-8 py-24 dot-pattern">
-      <div className="max-w-5xl w-full">
-        {/* Domain header */}
+    <div className="h-full flex flex-col justify-center px-8 py-24">
+      <div className="max-w-5xl w-full mx-auto">
+        {/* Domain badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex items-center gap-4 mb-8"
+          className="flex items-center gap-3 mb-6"
         >
           <div
-            className="w-14 h-14 rounded-2xl flex items-center justify-center"
+            className="w-10 h-10 rounded-xl flex items-center justify-center"
             style={{ background: `${domain.color}15` }}
           >
-            <Icon size={28} style={{ color: domain.color }} />
+            <Icon size={20} style={{ color: domain.color }} />
           </div>
-          <div>
-            <p className="text-white/40 text-xs font-heading font-medium uppercase tracking-wider">
-              Domain {domain.id} of 4
-            </p>
-            <h1
-              className="font-heading text-4xl md:text-5xl font-bold"
-              style={{ color: domain.color }}
-            >
-              {domain.title}
-            </h1>
-          </div>
+          <p className="text-white/40 text-xs font-heading font-medium uppercase tracking-wider">
+            Domain {domain.id} of 4
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Overview text */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            <h2 className="font-heading text-2xl font-semibold text-white/90 mb-4">
-              {domain.overview.headline}
-            </h2>
-            <p className="text-white/60 leading-relaxed mb-6">
-              {domain.overview.description}
-            </p>
-          </motion.div>
+        {/* Big title */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1]"
+          style={{ color: domain.color }}
+        >
+          {domain.title}
+        </motion.h1>
 
-          {/* Key points */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 }}
-            className="space-y-3"
-          >
-            {domain.overview.keyPoints.map((point, i) => (
-              <GlassCard
-                key={i}
-                delay={0.6 + i * 0.1}
-                className="p-4 flex items-start gap-3"
-                accentColor={domain.color}
-              >
-                <Lightbulb
-                  size={16}
-                  className="shrink-0 mt-0.5"
-                  style={{ color: domain.color }}
-                />
-                <p className="text-white/80 text-sm">{point}</p>
-              </GlassCard>
-            ))}
-          </motion.div>
-        </div>
+        {/* Big headline */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="font-heading text-2xl md:text-3xl font-semibold text-white/90 mb-5 leading-snug max-w-4xl"
+        >
+          {domain.overview.headline}
+        </motion.h2>
+
+        {/* Description — bigger */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="text-white/55 text-lg leading-relaxed max-w-4xl mb-10"
+        >
+          {domain.overview.description}
+        </motion.p>
+
+        {/* Visual hero area — gradient image block */}
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="w-full h-48 md:h-56 rounded-2xl overflow-hidden relative"
+          style={{
+            background: `linear-gradient(135deg, ${domain.color}18, ${domain.color}06 40%, rgba(255,255,255,0.02) 70%, ${domain.color}10)`,
+            border: `1px solid ${domain.color}12`,
+          }}
+        >
+          {/* Abstract mesh pattern inside */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 20% 50%, ${domain.color}15, transparent 50%), radial-gradient(circle at 80% 20%, ${domain.color}10, transparent 40%), radial-gradient(circle at 60% 80%, ${domain.color}08, transparent 45%)`,
+            }}
+          />
+          {/* Grid lines for depth */}
+          <div
+            className="absolute inset-0 opacity-[0.04]"
+            style={{
+              backgroundImage:
+                'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+          {/* Domain icon watermark */}
+          <div className="absolute right-8 bottom-6 opacity-[0.06]">
+            <Icon size={120} style={{ color: domain.color }} />
+          </div>
+          {/* Accent line */}
+          <div
+            className="absolute bottom-0 left-0 right-0 h-[2px]"
+            style={{
+              background: `linear-gradient(90deg, ${domain.color}60, ${domain.color}10, transparent)`,
+            }}
+          />
+        </motion.div>
       </div>
     </div>
   )
