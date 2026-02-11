@@ -58,25 +58,32 @@ export const domains = [
     ],
     articles: [
       {
-        title: 'The Great Wealth Transfer Will Reshape Financial Advice Forever',
-        source: 'Financial Times',
-        url: '#',
+        title: 'The $124 Trillion Great Wealth Transfer Is Bigger Than Ever — and Millennials Will Get the Biggest Cut',
+        source: 'Fortune',
+        url: 'https://fortune.com/2025/07/23/great-wealth-transfer-124-trillion-bigger-than-ever-millennials-gen-x/',
         summary:
-          'Gen X is projected to inherit nearly $1.4 trillion per year over the next decade, with Millennials set to receive $45.6 trillion over 25 years — and their expectations differ radically from their parents\'.',
+          'Cerulli projects $124 trillion will transfer through 2048 — up from earlier $84T estimates. Gen X will inherit $1.4T/year; Millennials $46T total. Heirs have radically different expectations and brand loyalty.',
       },
       {
-        title: 'Women Will Control $34 Trillion by 2030 — Is the Industry Ready?',
-        source: 'Bloomberg',
-        url: '#',
+        title: 'The Great Wealth Transfer: How Women Can Make the Most of It',
+        source: 'World Economic Forum',
+        url: 'https://www.weforum.org/stories/2024/07/women-inheritance-great-wealth-transfer/',
         summary:
-          'The massive shift of wealth toward women is exposing how poorly calibrated financial products, language, and advisory relationships are for female clients.',
+          '$54 trillion will first transfer between spouses, with $40 trillion going to widowed Boomer women. By 2030, women will control $34T in assets — yet 84% lack confidence managing an inheritance.',
       },
       {
-        title: 'The Paradox of Choice in Financial Services',
-        source: 'Harvard Business Review',
-        url: '#',
+        title: 'Financial Strategies for Women Navigating the Great Wealth Transfer',
+        source: 'UBS',
+        url: 'https://www.ubs.com/us/en/wealth-management/who-we-serve/specialized-advice/women-and-finances/articles/how-women-prepare-great-wealth-transfer.html',
         summary:
-          'An overwhelming number of financial options and decisions is paralyzing consumers rather than empowering them, with confidence gaps widening across demographics.',
+          '80% of women who inherited assets faced challenges; 83% of recently widowed women report wealth transfer difficulties. Only 49% of women have opened their own investment account vs. two-thirds of men.',
+      },
+      {
+        title: 'Preparing for the Great Wealth Transfer',
+        source: 'U.S. Bank',
+        url: 'https://www.usbank.com/wealth-management/financial-perspectives/women-and-money/women-and-great-wealth-transfer.html',
+        summary:
+          'Older households now control 61% of national wealth (up from 54% three years ago). Only a quarter of families have discussed generational transfer, and 38% of women have no plan to start.',
       },
     ],
     companies: [
@@ -158,25 +165,32 @@ export const domains = [
     ],
     articles: [
       {
-        title: 'How Bank of America\'s "Erica" Became the Blueprint for AI in Finance',
-        source: 'American Banker',
-        url: '#',
+        title: 'AI Transformation in Financial Services: 5 Predictors for Success in 2026',
+        source: 'Microsoft',
+        url: 'https://www.microsoft.com/en-us/industry/blog/financial-services/2025/12/18/ai-transformation-in-financial-services-5-predictors-for-success-in-2026/',
         summary:
-          'With over 2.5 billion interactions and 20 million regular users, BofA\'s AI assistant is proving that AI can be the primary interface for financial services without destroying trust.',
+          'Financial services has the highest concentration of "Frontier Firms" embedding AI agents across every workflow. These firms report AI investment returns 3x higher than slow adopters.',
       },
       {
-        title: 'The Advisor Workforce Crisis: 110,000 Retirements and Counting',
-        source: 'InvestmentNews',
-        url: '#',
+        title: 'Insurers Accelerate AI Rollout as OpenAI Demand Surges',
+        source: 'Fintech Global',
+        url: 'https://fintech.global/2025/12/05/insurers-accelerate-ai-rollout-as-openai-demand-surges/',
         summary:
-          '38% of financial advisors are expected to retire in the next decade, managing 42% of total industry assets — forcing the industry toward hybrid human-digital models.',
+          'Major insurers are deploying generative AI as a core operating system for fraud detection, claims handling, customer support, and risk analytics — shifting AI from back-office to front-office.',
       },
       {
-        title: 'The Personalization Paradox: Consumers Want It but Don\'t Trust It',
-        source: 'McKinsey & Company',
-        url: '#',
+        title: 'Artificial Intelligence in Financial Services',
+        source: 'World Economic Forum',
+        url: 'https://reports.weforum.org/docs/WEF_Artificial_Intelligence_in_Financial_Services_2025.pdf',
         summary:
-          '64% of consumers prefer personalized experiences, yet only 26% trust organizations to handle their personal data responsibly — creating a critical tension for financial services.',
+          'Comprehensive analysis of AI\'s pivot from cost-reduction to primary consumer interface. JPMorgan has allocated $18B to technology in 2025, with AI tools used by 200,000+ employees achieving 30% cost reduction.',
+      },
+      {
+        title: 'AI Integration in Financial Services: Trends and Regulatory Challenges',
+        source: 'Nature',
+        url: 'https://www.nature.com/articles/s41599-025-04850-8',
+        summary:
+          'Systematic review of AI adoption from 1989–2024 across credit scoring, fraud detection, and robo-advisory. Data security is the leading barrier — cited by 33% of firms — underscoring the trust-personalization tension.',
       },
     ],
     companies: [
@@ -258,25 +272,32 @@ export const domains = [
     ],
     articles: [
       {
-        title: 'Annuity Sales Shatter Records as Consumers Seek Certainty',
+        title: '2024 Retail Annuity Sales Grow 13% to a Record $434.1 Billion',
         source: 'LIMRA',
-        url: '#',
+        url: 'https://www.limra.com/en/newsroom/news-releases/2025/limra-2024-retail-annuity-sales-grow-12-to-a-record-$434.1-billion/',
         summary:
-          'U.S. annuity sales have exceeded $100 billion for 8 consecutive quarters through Q3 2025, driven by consumer demand for guaranteed income in uncertain times.',
+          'Total annuity sales surpassed $100B in all four quarters of 2024 — a first. Three consecutive record years totaling $1.1 trillion in sales, driven by consumer demand for guarantees amid volatility.',
       },
       {
-        title: 'How Falling Rates Are Reshaping the Insurance Product Shelf',
-        source: 'Insurance Journal',
-        url: '#',
+        title: 'U.S. Annuity Sales Set New Record in First Half of 2025',
+        source: 'LIMRA',
+        url: 'https://www.limra.com/en/newsroom/news-releases/2025/limra-u.s.-annuity-sales-set-new-record-in-first-half-of-2025/',
         summary:
-          'As interest rates fell in 2024, product mix shifted dramatically: fixed-rate deferred annuities dropped 7% while RILAs surged 38% and fixed indexed annuities grew 32%.',
+          'H1 2025 annuity sales hit $223B, 3% above prior year. Q2 2025 was the highest quarterly total ever at $116.6B. Market volatility in Q1 calmed by Q2, but demand for protected growth stayed elevated.',
       },
       {
-        title: 'The Private Credit Boom in Insurance: Opportunity and Risk',
-        source: 'Financial Times',
-        url: '#',
+        title: 'A Mixed Bag Likely for the U.S. Retail Annuity Market in 2025',
+        source: 'LIMRA',
+        url: 'https://www.limra.com/en/newsroom/industry-trends/2025/a-mixed-bag-likely-for-the-u.s.-retail-annuity-market-in-2025/',
         summary:
-          'Life and annuity insurer allocations to private placements and illiquid assets have risen to 38% of total portfolios, up from 30% in 2018, raising questions about concentration risk.',
+          'Falling rates are reshaping the product shelf: fixed-rate deferred annuities dropped 7% while RILAs surged 38% and FIAs grew 31%. LIMRA projects sales will remain above $350B through 2027.',
+      },
+      {
+        title: 'U.S. Annuity Market: New Opportunities Amid Economic Uncertainty',
+        source: 'LIMRA',
+        url: 'https://www.limra.com/en/newsroom/industry-trends/2025/u.s.-annuity-market-new-opportunities-amid-economic-uncertainty/',
+        summary:
+          '6 in 10 consumers are very concerned about the economy. Through 2029, 4M+ people will turn 65 annually — most without pensions. Over half of pre-retirees are interested in converting assets to annuities.',
       },
     ],
     companies: [
@@ -358,25 +379,32 @@ export const domains = [
     ],
     articles: [
       {
-        title: '#FinTok: How TikTok Is Changing How People Discover Financial Products',
-        source: 'Wall Street Journal',
-        url: '#',
-        summary:
-          'With 4.5 billion views, #FinTok is reshaping how consumers — especially younger ones — discover, evaluate, and trust financial products and advice.',
-      },
-      {
-        title: 'The RILA Revolution: From $3.7B to $75B in a Decade',
-        source: 'LIMRA',
-        url: '#',
-        summary:
-          'Registered index-linked annuity sales have exploded from $3.7 billion in 2015 to $65.6 billion in 2024, with projections to exceed $75 billion in 2025.',
-      },
-      {
-        title: 'The Coming Advisor Shortage Could Reshape Financial Services',
+        title: 'The Looming Advisor Shortage in US Wealth Management',
         source: 'McKinsey & Company',
-        url: '#',
+        url: 'https://www.mckinsey.com/industries/financial-services/our-insights/the-looming-advisor-shortage-in-us-wealth-management',
         summary:
-          'McKinsey projects a shortfall of 90,000–110,000 advisors by 2034 as 38% of the current workforce retires, creating an existential distribution challenge.',
+          'McKinsey projects a 90,000–110,000 advisor shortfall by 2034. 51% of CFPs are over 50, the workforce grows at just 0.3% annually, and the rookie failure rate is 72%.',
+      },
+      {
+        title: 'As More Americans Turn to FinTok for Financial Guidance, Experts Urge Caution',
+        source: 'Wealthtender',
+        url: 'https://wealthtender.com/insights/fintok/',
+        summary:
+          '68% of FinTok users say it improved their financial situation. 71% of Gen Z report social media positively impacts financial decisions — a seismic shift in how consumers discover products.',
+      },
+      {
+        title: 'Corebridge Launches RILA, Becoming Only Top 3 Provider with Products in Every Major Category',
+        source: 'Corebridge Financial',
+        url: 'https://www.corebridgefinancial.com/who-we-are/newsroom/rila-annuity',
+        summary:
+          'RILA sales exploded from $3.7B in 2015 to $65.6B in 2024. New market entrants like Corebridge are broadening product shelves, intensifying competition across every annuity category.',
+      },
+      {
+        title: '2026 Global Insurance Outlook',
+        source: 'Deloitte',
+        url: 'https://www.deloitte.com/us/en/insights/industry/financial-services/financial-services-industry-outlooks/insurance-industry-outlook.html',
+        summary:
+          'The $49.8B U.S. insurtech market is projected to reach $66.7B by 2029. Broker consolidation, M&A activity, and digital-first models are reshaping distribution and compressing competition.',
       },
     ],
     companies: [

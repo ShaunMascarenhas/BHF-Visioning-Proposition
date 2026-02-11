@@ -142,16 +142,16 @@ app.get('/api/news/:domainId', async (req, res) => {
   }
 
   try {
-    // Build a targeted search query for this domain intersecting with finance
+    // Highly targeted search queries per domain, aligned to specific key factors
     const searchQueries = {
-      1: '("wealth transfer" OR "women investors" OR "financial anxiety" OR longevity) AND (insurance OR annuity OR "financial planning")',
-      2: '("artificial intelligence" OR "AI advisor" OR "digital distribution") AND (insurance OR annuity OR "financial services")',
-      3: '("annuity sales" OR "interest rates" OR "market volatility" OR RILA) AND (insurance OR "life insurance" OR annuity)',
-      4: '("advisor shortage" OR insurtech OR "product innovation" OR FinTok) AND (insurance OR annuity OR "financial services")',
+      1: '("great wealth transfer" OR "women wealth" OR "generational inheritance" OR "retirement anxiety" OR "longevity risk") AND (annuity OR insurance OR "financial planning" OR "life insurance")',
+      2: '("AI financial" OR "artificial intelligence insurance" OR "robo-advisor" OR "digital financial advice" OR "agentic AI") AND (insurance OR annuity OR "wealth management")',
+      3: '("annuity sales record" OR "RILA sales" OR "fixed indexed annuity" OR "interest rate" OR "private credit insurance") AND (annuity OR "life insurance")',
+      4: '("financial advisor shortage" OR "FinTok" OR "insurtech" OR "RILA innovation" OR "annuity competition") AND (insurance OR annuity OR "wealth management")',
     }
 
     const query = searchQueries[domainId] || domain.keywords
-    const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&sortBy=relevancy&pageSize=5&language=en&apiKey=${apiKey}`
+    const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&sortBy=relevancy&pageSize=4&language=en&apiKey=${apiKey}`
 
     const response = await fetch(url)
     const data = await response.json()
@@ -160,14 +160,17 @@ app.get('/api/news/:domainId', async (req, res) => {
       throw new Error(data.message || 'News API error')
     }
 
-    const articles = (data.articles || []).map((article) => ({
-      title: article.title,
-      source: article.source?.name || 'Unknown',
-      url: article.url,
-      summary: article.description || '',
-      imageUrl: article.urlToImage,
-      publishedAt: article.publishedAt,
-    }))
+    const articles = (data.articles || [])
+      .filter((article) => article.title && !article.title.includes('[Removed]') && article.description)
+      .slice(0, 4)
+      .map((article) => ({
+        title: article.title,
+        source: article.source?.name || 'Unknown',
+        url: article.url,
+        summary: article.description || '',
+        imageUrl: article.urlToImage,
+        publishedAt: article.publishedAt,
+      }))
 
     res.json({ articles })
   } catch (error) {

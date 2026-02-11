@@ -176,7 +176,7 @@ function ArticlesSlide({ domain }) {
       const res = await fetch(`/api/news/${domain.id}`)
       const data = await res.json()
       if (data.articles && data.articles.length > 0) {
-        setLiveArticles(data.articles)
+        setLiveArticles(data.articles.slice(0, 4))
       }
     } catch {
       // Fall back to static articles
@@ -189,11 +189,11 @@ function ArticlesSlide({ domain }) {
     fetchNews()
   }, [domain.id])
 
-  const articles = liveArticles || domain.articles
+  const articles = (liveArticles || domain.articles).slice(0, 4)
 
   return (
     <div className="h-full flex items-center justify-center px-8 py-24">
-      <div className="max-w-4xl w-full">
+      <div className="max-w-5xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -223,18 +223,18 @@ function ArticlesSlide({ domain }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="font-heading text-3xl font-bold text-white mb-10"
+          className="font-heading text-3xl font-bold text-white mb-8"
         >
           Headlines &amp; Evidence
         </motion.h2>
 
-        <div className="space-y-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {articles.map((article, i) => (
             <GlassCard
               key={i}
               hover
               delay={0.2 + i * 0.1}
-              className="p-6 flex items-start gap-5 group cursor-pointer"
+              className="p-5 flex flex-col group cursor-pointer h-full"
               accentColor={domain.color}
               onClick={() => {
                 if (article.url && article.url !== '#') {
@@ -242,33 +242,31 @@ function ArticlesSlide({ domain }) {
                 }
               }}
             >
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                style={{ background: `${domain.color}15` }}
-              >
-                <ExternalLink size={16} style={{ color: domain.color }} />
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span
-                    className="text-xs font-medium"
-                    style={{ color: domain.color }}
-                  >
-                    {article.source}
-                  </span>
-                  {article.publishedAt && (
-                    <span className="text-white/20 text-xs">
-                      {new Date(article.publishedAt).toLocaleDateString()}
-                    </span>
-                  )}
+              <div className="flex items-center gap-2 mb-3">
+                <div
+                  className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                  style={{ background: `${domain.color}15` }}
+                >
+                  <ExternalLink size={14} style={{ color: domain.color }} />
                 </div>
-                <h3 className="font-heading font-semibold text-white/90 mb-2 group-hover:text-white transition-colors">
-                  {article.title}
-                </h3>
-                <p className="text-white/50 text-sm leading-relaxed">
-                  {article.summary}
-                </p>
+                <span
+                  className="text-xs font-medium"
+                  style={{ color: domain.color }}
+                >
+                  {article.source}
+                </span>
+                {article.publishedAt && (
+                  <span className="text-white/20 text-xs ml-auto">
+                    {new Date(article.publishedAt).toLocaleDateString()}
+                  </span>
+                )}
               </div>
+              <h3 className="font-heading font-semibold text-white/90 text-sm mb-2 group-hover:text-white transition-colors leading-snug">
+                {article.title}
+              </h3>
+              <p className="text-white/50 text-xs leading-relaxed flex-1">
+                {article.summary}
+              </p>
             </GlassCard>
           ))}
         </div>
