@@ -184,7 +184,8 @@ app.get('/api/news/:domainId', async (req, res) => {
 app.post('/api/ai/cleanup/:domainId', async (req, res) => {
   const { domainId } = req.params
   const domain = domainContext[domainId]
-  const ideas = workshopData.ideas[domainId] || []
+  // Use ideas from request body (client-side store) if server store is empty
+  const ideas = (req.body?.ideas?.length > 0 ? req.body.ideas : workshopData.ideas[domainId]) || []
 
   if (ideas.length === 0) {
     return res.status(400).json({ error: 'No ideas to process for this domain' })

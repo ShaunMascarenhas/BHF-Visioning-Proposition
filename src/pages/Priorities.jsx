@@ -104,6 +104,8 @@ export default function Priorities() {
     try {
       const res = await fetch(`/api/ai/cleanup/${domainId}`, {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ideas: ideas[domainId] || [] }),
       })
       const data = await res.json()
 
