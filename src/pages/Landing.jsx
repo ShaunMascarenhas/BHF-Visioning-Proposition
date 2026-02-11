@@ -10,6 +10,7 @@ import {
   Heart,
   ArrowRight,
   ChevronRight,
+  Coffee,
 } from 'lucide-react'
 import { domains, workshopInfo } from '../data/domains'
 import GlassCard from '../components/GlassCard'
@@ -22,6 +23,7 @@ const iconMap = {
   Sparkles,
   Target,
   Heart,
+  Coffee,
 }
 
 const containerVariants = {
@@ -204,52 +206,44 @@ export default function Landing() {
             Where we will focus today
           </motion.p>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {workshopInfo.agenda.map((item, i) => {
               const Icon = iconMap[item.icon] || Sparkles
+              const isClickable = !!item.link
               return (
                 <GlassCard
                   key={i}
-                  hover
-                  delay={i * 0.08}
-                  className="p-5 flex items-center gap-5 cursor-pointer group"
-                  onClick={() => {
-                    if (i >= 1 && i <= 4) navigate(`/domain/${i}`)
-                    else if (i === 5) navigate('/priorities')
-                  }}
+                  hover={isClickable}
+                  delay={i * 0.06}
+                  className={`p-4 flex items-center gap-4 ${isClickable ? 'cursor-pointer' : ''} group`}
+                  onClick={() => isClickable && navigate(item.link)}
                 >
-                  <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                    style={{
-                      background:
-                        i >= 1 && i <= 4
-                          ? `${domains[i - 1].color}15`
-                          : 'rgba(0,229,255,0.1)',
-                    }}
-                  >
-                    <Icon
-                      size={18}
-                      style={{
-                        color:
-                          i >= 1 && i <= 4
-                            ? domains[i - 1].color
-                            : '#00e5ff',
-                      }}
-                    />
+                  <div className="w-16 shrink-0 text-right">
+                    <span className="text-xs font-mono text-white/30">{item.time}</span>
                   </div>
 
-                  <div className="flex-1">
+                  <div
+                    className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+                    style={{ background: 'rgba(0,229,255,0.08)' }}
+                  >
+                    <Icon size={16} className="text-cyan-400/70" />
+                  </div>
+
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-heading font-semibold text-white/90 text-sm">
                       {item.label}
                     </h3>
+                    {item.description && (
+                      <p className="text-white/30 text-xs mt-0.5 truncate">{item.description}</p>
+                    )}
                   </div>
 
-                  {(i >= 1 && i <= 4) || i === 5 ? (
+                  {isClickable && (
                     <ChevronRight
                       size={16}
-                      className="text-white/20 group-hover:text-white/50 transition-colors"
+                      className="text-white/20 group-hover:text-white/50 transition-colors shrink-0"
                     />
-                  ) : null}
+                  )}
                 </GlassCard>
               )
             })}
