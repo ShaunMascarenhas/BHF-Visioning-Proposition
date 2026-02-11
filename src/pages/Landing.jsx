@@ -62,16 +62,20 @@ export default function Landing() {
             variants={itemVariants}
             className="flex items-center justify-center gap-8 mb-12"
           >
-            <div className="glass-card px-6 py-3 rounded-xl">
-              <span className="font-heading font-bold text-lg gradient-text">
-                Brighthouse Financial
-              </span>
+            <div className="glass-card px-5 py-3 rounded-xl flex items-center">
+              <img
+                src="/images/brighthouse-logo.svg"
+                alt="Brighthouse Financial"
+                className="h-12 md:h-14"
+              />
             </div>
             <div className="text-white/20 text-2xl font-light">&times;</div>
-            <div className="glass-card px-6 py-3 rounded-xl">
-              <span className="font-heading font-bold text-lg text-white/80">
-                cg42
-              </span>
+            <div className="glass-card px-5 py-3 rounded-xl flex items-center">
+              <img
+                src="/images/cg42-logo.svg"
+                alt="cg42"
+                className="h-10 md:h-12"
+              />
             </div>
           </motion.div>
 
@@ -151,10 +155,22 @@ export default function Landing() {
                 transition={{ delay: i * 0.15 }}
                 className="text-center"
               >
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-electric-cyan/20 to-vivid-purple/20 border border-white/10 flex items-center justify-center mb-4 mx-auto">
-                  <span className="font-heading text-2xl md:text-3xl font-bold text-white/60">
-                    {presenter.name[0]}
-                  </span>
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white/10 mb-4 mx-auto relative group">
+                  {presenter.image ? (
+                    <img
+                      src={presenter.image}
+                      alt={presenter.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-electric-cyan/20 to-vivid-purple/20 flex items-center justify-center">
+                      <span className="font-heading text-2xl md:text-3xl font-bold text-white/60">
+                        {presenter.name[0]}
+                      </span>
+                    </div>
+                  )}
+                  {/* Glow ring on hover */}
+                  <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-electric-cyan/30 transition-colors duration-500" />
                 </div>
                 <h3 className="font-heading font-semibold text-white/90">
                   {presenter.name}

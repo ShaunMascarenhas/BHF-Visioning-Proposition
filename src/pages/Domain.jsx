@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import {
   Users,
@@ -11,6 +12,8 @@ import {
   Newspaper,
   Building2,
   MessageSquarePlus,
+  RefreshCw,
+  Loader2,
 } from 'lucide-react'
 import { domains } from '../data/domains'
 import SlideContainer from '../components/SlideContainer'
@@ -162,18 +165,56 @@ function FactorsSlide({ domain }) {
 }
 
 function ArticlesSlide({ domain }) {
+  const [liveArticles, setLiveArticles] = useState(null)
+  const [loading, setLoading] = useState(false)
+
+  const fetchNews = async () => {
+    setLoading(true)
+    try {
+      const res = await fetch(`/api/news/${domain.id}`)
+      const data = await res.json()
+      if (data.articles && data.articles.length > 0) {
+        setLiveArticles(data.articles)
+      }
+    } catch {
+      // Fall back to static articles
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchNews()
+  }, [domain.id])
+
+  const articles = liveArticles || domain.articles
+
   return (
     <div className="h-full flex items-center justify-center px-8 py-24">
       <div className="max-w-4xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex items-center gap-3 mb-3"
+          className="flex items-center justify-between mb-3"
         >
-          <Newspaper size={20} style={{ color: domain.color }} />
-          <p className="text-white/40 text-xs font-heading font-medium uppercase tracking-wider">
-            In the News
-          </p>
+          <div className="flex items-center gap-3">
+            <Newspaper size={20} style={{ color: domain.color }} />
+            <p className="text-white/40 text-xs font-heading font-medium uppercase tracking-wider">
+              {liveArticles ? 'Live News' : 'In the News'}
+            </p>
+          </div>
+          <button
+            onClick={fetchNews}
+            disabled={loading}
+            className="flex items-center gap-1.5 text-white/30 hover:text-white/60 text-xs transition-colors"
+          >
+            {loading ? (
+              <Loader2 size={12} className="animate-spin" />
+            ) : (
+              <RefreshCw size={12} />
+            )}
+            Refresh
+          </button>
         </motion.div>
 
         <motion.h2
@@ -186,13 +227,18 @@ function ArticlesSlide({ domain }) {
         </motion.h2>
 
         <div className="space-y-5">
-          {domain.articles.map((article, i) => (
+          {articles.map((article, i) => (
             <GlassCard
               key={i}
               hover
               delay={0.2 + i * 0.1}
               className="p-6 flex items-start gap-5 group cursor-pointer"
               accentColor={domain.color}
+              onClick={() => {
+                if (article.url && article.url !== '#') {
+                  window.open(article.url, '_blank', 'noopener')
+                }
+              }}
             >
               <div
                 className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
@@ -208,6 +254,11 @@ function ArticlesSlide({ domain }) {
                   >
                     {article.source}
                   </span>
+                  {article.publishedAt && (
+                    <span className="text-white/20 text-xs">
+                      {new Date(article.publishedAt).toLocaleDateString()}
+                    </span>
+                  )}
                 </div>
                 <h3 className="font-heading font-semibold text-white/90 mb-2 group-hover:text-white transition-colors">
                   {article.title}
