@@ -68,7 +68,7 @@ export default function Landing() {
           >
             <div className="w-48 flex items-center justify-center">
               <img
-                src="/images/brighthouse-logo.svg"
+                src={`${import.meta.env.BASE_URL}images/brighthouse-logo.svg`}
                 alt="Brighthouse Financial"
                 className="h-12"
               />
@@ -76,7 +76,7 @@ export default function Landing() {
             <div className="text-white/20 text-xl font-light">&times;</div>
             <div className="w-48 flex items-center justify-center">
               <img
-                src="/images/cg42-logo.svg"
+                src={`${import.meta.env.BASE_URL}images/cg42-logo.svg`}
                 alt="cg42"
                 className="h-10"
               />
