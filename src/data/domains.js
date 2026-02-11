@@ -10,6 +10,8 @@ export const domains = [
     color: '#00e5ff',
     gradient: 'from-cyan-500 to-blue-600',
     icon: 'Heart',
+    heroImage:
+      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1920&q=80',
     overview: {
       headline:
         'The people making financial decisions are changing — and so must the industry',
@@ -121,6 +123,8 @@ export const domains = [
     color: '#8b5cf6',
     gradient: 'from-violet-500 to-purple-700',
     icon: 'Cpu',
+    heroImage:
+      'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80',
     overview: {
       headline:
         'The question isn\'t whether technology replaces relationships — it\'s how it augments them',
@@ -232,6 +236,8 @@ export const domains = [
     color: '#ec4899',
     gradient: 'from-pink-500 to-rose-600',
     icon: 'TrendingUp',
+    heroImage:
+      'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1920&q=80',
     overview: {
       headline:
         'Volatility is the new normal — and it cuts both ways',
@@ -343,6 +349,8 @@ export const domains = [
     color: '#f59e0b',
     gradient: 'from-amber-500 to-orange-600',
     icon: 'Target',
+    heroImage:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80',
     overview: {
       headline:
         'The rules of competition are being rewritten',

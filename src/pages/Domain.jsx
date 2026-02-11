@@ -29,96 +29,88 @@ function OverviewSlide({ domain }) {
   const Icon = iconMap[domain.icon] || Users
 
   return (
-    <div className="h-full flex flex-col justify-center px-8 py-24">
-      <div className="max-w-5xl w-full mx-auto">
-        {/* Domain badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="flex items-center gap-3 mb-6"
-        >
-          <div
-            className="w-10 h-10 rounded-xl flex items-center justify-center"
-            style={{ background: `${domain.color}15` }}
+    <div className="h-full relative overflow-hidden">
+      {/* Background image layer */}
+      {domain.heroImage && (
+        <div className="absolute inset-0">
+          <img
+            src={domain.heroImage}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+
+      {/* Dark overlay for text readability */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: domain.heroImage
+            ? `linear-gradient(to right, rgba(10,10,15,0.92) 0%, rgba(10,10,15,0.8) 50%, rgba(10,10,15,0.6) 100%)`
+            : `linear-gradient(135deg, rgba(10,10,15,1) 0%, rgba(10,10,15,0.95) 50%, rgba(10,10,15,0.9) 100%)`,
+        }}
+      />
+
+      {/* Subtle color wash from domain */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: `radial-gradient(ellipse at 70% 50%, ${domain.color}08, transparent 70%)`,
+        }}
+      />
+
+      {/* Text content */}
+      <div className="relative z-10 h-full flex flex-col justify-center px-8 py-24">
+        <div className="max-w-5xl w-full mx-auto">
+          {/* Domain badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="flex items-center gap-3 mb-6"
           >
-            <Icon size={20} style={{ color: domain.color }} />
-          </div>
-          <p className="text-white/40 text-xs font-heading font-medium uppercase tracking-wider">
-            Domain {domain.id} of 4
-          </p>
-        </motion.div>
+            <div
+              className="w-10 h-10 rounded-xl flex items-center justify-center backdrop-blur-sm"
+              style={{ background: `${domain.color}20` }}
+            >
+              <Icon size={20} style={{ color: domain.color }} />
+            </div>
+            <p className="text-white/40 text-xs font-heading font-medium uppercase tracking-wider">
+              Domain {domain.id} of 4
+            </p>
+          </motion.div>
 
-        {/* Big title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1]"
-          style={{ color: domain.color }}
-        >
-          {domain.title}
-        </motion.h1>
+          {/* Big title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1]"
+            style={{ color: domain.color }}
+          >
+            {domain.title}
+          </motion.h1>
 
-        {/* Big headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="font-heading text-2xl md:text-3xl font-semibold text-white/90 mb-5 leading-snug max-w-4xl"
-        >
-          {domain.overview.headline}
-        </motion.h2>
+          {/* Big headline */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="font-heading text-2xl md:text-3xl font-semibold text-white/90 mb-5 leading-snug max-w-4xl"
+          >
+            {domain.overview.headline}
+          </motion.h2>
 
-        {/* Description — bigger */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="text-white/55 text-lg leading-relaxed max-w-4xl mb-10"
-        >
-          {domain.overview.description}
-        </motion.p>
-
-        {/* Visual hero area — gradient image block */}
-        <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.98 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="w-full h-48 md:h-56 rounded-2xl overflow-hidden relative"
-          style={{
-            background: `linear-gradient(135deg, ${domain.color}18, ${domain.color}06 40%, rgba(255,255,255,0.02) 70%, ${domain.color}10)`,
-            border: `1px solid ${domain.color}12`,
-          }}
-        >
-          {/* Abstract mesh pattern inside */}
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle at 20% 50%, ${domain.color}15, transparent 50%), radial-gradient(circle at 80% 20%, ${domain.color}10, transparent 40%), radial-gradient(circle at 60% 80%, ${domain.color}08, transparent 45%)`,
-            }}
-          />
-          {/* Grid lines for depth */}
-          <div
-            className="absolute inset-0 opacity-[0.04]"
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)',
-              backgroundSize: '40px 40px',
-            }}
-          />
-          {/* Domain icon watermark */}
-          <div className="absolute right-8 bottom-6 opacity-[0.06]">
-            <Icon size={120} style={{ color: domain.color }} />
-          </div>
-          {/* Accent line */}
-          <div
-            className="absolute bottom-0 left-0 right-0 h-[2px]"
-            style={{
-              background: `linear-gradient(90deg, ${domain.color}60, ${domain.color}10, transparent)`,
-            }}
-          />
-        </motion.div>
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="text-white/55 text-lg leading-relaxed max-w-3xl"
+          >
+            {domain.overview.description}
+          </motion.p>
+        </div>
       </div>
     </div>
   )
