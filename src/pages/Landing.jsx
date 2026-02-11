@@ -53,7 +53,7 @@ export default function Landing() {
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-glow-purple opacity-15 pointer-events-none" />
 
       {/* Two-column layout */}
-      <div className="h-full flex flex-col lg:flex-row items-stretch px-6 lg:px-12 xl:px-20 py-8 gap-8 lg:gap-12">
+      <div className="h-full flex flex-col lg:flex-row items-stretch px-6 lg:px-12 xl:px-20 pt-24 pb-8 gap-8 lg:gap-12">
         {/* Left Column — Logos, Title, Presenters */}
         <motion.div
           variants={containerVariants}
@@ -96,7 +96,10 @@ export default function Landing() {
           </motion.h1>
 
           {/* Presenters */}
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} className="mt-4">
+            <h2 className="font-heading text-lg font-semibold text-white/60 mb-5">
+              Presenters
+            </h2>
             <div className="flex items-start gap-8 md:gap-10">
               {workshopInfo.presenters.map((presenter, i) => (
                 <motion.div
