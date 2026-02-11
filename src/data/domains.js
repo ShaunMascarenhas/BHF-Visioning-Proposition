@@ -423,7 +423,7 @@ export const workshopInfo = {
     {
       name: 'Shaun',
       role: 'Presenter',
-      image: '/images/shaun.jpg', // Place headshot at public/images/shaun.jpg
+      image: '/images/shaun.png',
     },
   ],
   agenda: [
