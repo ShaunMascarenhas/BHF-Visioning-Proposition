@@ -1,342 +1,406 @@
-// Domain data - placeholder content to be replaced with actual workshop content
-// Each domain represents one of the four structural forces
+// Domain data — real workshop content for Brighthouse Financial
+// "The Structural Forces Reshaping Money & Human Behavior"
 
 export const domains = [
   {
     id: 1,
-    title: 'The Evolving Consumer',
-    subtitle: 'How expectations, demographics & digital nativity are reshaping financial relationships',
+    title: 'The Human Side',
+    subtitle:
+      'The financial lives people are planning for are longer, more complex, and more anxiety-inducing than ever before',
     color: '#00e5ff',
     gradient: 'from-cyan-500 to-blue-600',
-    icon: 'Users',
+    icon: 'Heart',
     overview: {
-      headline: 'The consumer of tomorrow is already here',
+      headline:
+        'The people making financial decisions are changing — and so must the industry',
       description:
-        'Shifting demographics, rising digital expectations, and a new relationship with money are fundamentally altering how people interact with financial services. The next generation doesn\'t just want different products — they want a different relationship with their finances entirely.',
+        'The financial lives people are planning for are longer, more complex, and more anxiety-inducing than ever before. At the same time, the people making these decisions are changing; women are increasingly controlling more wealth and yet aren\'t represented in products, content, or people. This is all taking place amidst the backdrop of a massive generational transfer. Within this, consumers are faced with an overwhelming number of financial options and decisions which paralyze them.',
       keyPoints: [
-        'Gen Z and Millennials will control the majority of wealth by 2030',
-        'Trust in traditional financial institutions is at historic lows',
-        'Consumers expect hyper-personalized, on-demand financial experiences',
-        'Financial wellness is becoming inseparable from overall wellbeing',
+        'Trillions of dollars are changing hands, and heirs have different expectations, advisors, and brand loyalty',
+        'Retirement is turning into a 30+ year phase, turning the fear of outliving savings into a central financial anxiety',
+        'Women are controlling more household wealth, yet products, language, and people aren\'t calibrated for them',
+        'More choices, more complexity, more noise is paralyzing consumers, not empowering them',
       ],
     },
     factors: [
       {
-        name: 'Demographic Shift',
-        description: 'The largest intergenerational wealth transfer in history is underway',
-        stat: '$84T',
-        statLabel: 'in wealth transferring to younger generations by 2045',
+        name: 'The Intergenerational Wealth Transfer',
+        description:
+          'Trillions of dollars are changing hands, and their heirs have different expectations, advisors, and brand loyalty.',
+        stat: '$1.4T',
+        statLabel:
+          'per year projected for Gen X inheritance over the next decade; Millennials will receive $45.6T over 25 years',
       },
       {
-        name: 'Digital Expectations',
-        description: 'Consumers benchmark financial services against the best digital experiences',
-        stat: '73%',
-        statLabel: 'of consumers expect companies to understand their needs',
+        name: 'Increasing Longevity & Financial Anxiety',
+        description:
+          'Retirement is turning into a 30+ year phase, turning the fear of outliving savings into a central financial anxiety.',
+        stat: '6 in 10',
+        statLabel:
+          'Gen X consumers are concerned about outliving their savings',
       },
       {
-        name: 'Financial Anxiety',
-        description: 'Economic uncertainty is driving new attitudes toward saving, investing, and protection',
-        stat: '65%',
-        statLabel: 'of Americans report money as a significant source of stress',
+        name: 'Women as the Ascendant Financial Decision-Maker',
+        description:
+          'Women are controlling more and more household wealth, yet products, language, and people aren\'t calibrated for women.',
+        stat: '$34T',
+        statLabel:
+          'in assets expected to be controlled by women by 2030, up from $7.3T a decade ago',
       },
       {
-        name: 'Values-Driven Decisions',
-        description: 'Consumers increasingly choose brands that align with their personal values',
-        stat: '82%',
-        statLabel: 'of Gen Z consider company values before purchasing',
+        name: 'Cognitive Overload & Disengagement',
+        description:
+          'More choices, more complexity, more noise, more, more, more is paralyzing consumers, not empowering them.',
+        stat: '84%',
+        statLabel:
+          'of women say they lack confidence in managing an inheritance or financial windfall, vs. 73% of men',
       },
     ],
     articles: [
       {
-        title: 'The Great Wealth Transfer Is Coming — And It Will Change Everything',
+        title: 'The Great Wealth Transfer Will Reshape Financial Advice Forever',
         source: 'Financial Times',
         url: '#',
-        summary: 'An unprecedented $84 trillion in wealth is set to pass from Baby Boomers to younger generations, reshaping the financial landscape.',
+        summary:
+          'Gen X is projected to inherit nearly $1.4 trillion per year over the next decade, with Millennials set to receive $45.6 trillion over 25 years — and their expectations differ radically from their parents\'.',
       },
       {
-        title: 'Why Gen Z Is Breaking Up With Traditional Banks',
+        title: 'Women Will Control $34 Trillion by 2030 — Is the Industry Ready?',
         source: 'Bloomberg',
         url: '#',
-        summary: 'Young consumers are flocking to fintech alternatives that offer transparency, simplicity, and alignment with their values.',
+        summary:
+          'The massive shift of wealth toward women is exposing how poorly calibrated financial products, language, and advisory relationships are for female clients.',
       },
       {
-        title: 'The Rise of Financial Wellness as a Benefit',
+        title: 'The Paradox of Choice in Financial Services',
         source: 'Harvard Business Review',
         url: '#',
-        summary: 'Employers and financial institutions are recognizing that financial stress impacts productivity, health, and retention.',
+        summary:
+          'An overwhelming number of financial options and decisions is paralyzing consumers rather than empowering them, with confidence gaps widening across demographics.',
       },
     ],
     companies: [
       {
-        name: 'Betterment',
-        description: 'Automated investing and financial planning that makes wealth-building accessible to everyone',
-        category: 'Wealth Management',
+        name: 'Ellevest',
+        description:
+          'Investment platform built specifically for women, addressing the gender wealth gap through tailored financial planning',
+        category: 'Women-Focused Finance',
       },
       {
         name: 'Greenlight',
-        description: 'Financial literacy platform teaching the next generation about money management from childhood',
+        description:
+          'Financial literacy platform teaching the next generation about money management, targeting the inheriting cohort early',
         category: 'Financial Education',
       },
       {
-        name: 'Lemonade',
-        description: 'AI-powered insurance that donates unclaimed premiums to causes customers care about',
-        category: 'Values-Driven Insurance',
+        name: 'Facet',
+        description:
+          'Flat-fee financial planning removing complexity and aligning incentives, combating decision paralysis',
+        category: 'Simplified Planning',
       },
     ],
     exercisePrompt:
-      'Given the evolving consumer landscape, what should Brighthouse Financial do to better serve the next generation of customers? Think about products, experiences, communication, and values.',
+      'Given the shifts in who is making financial decisions (generational transfer, women controlling more wealth) and the growing anxiety and cognitive overload consumers face — what should Brighthouse Financial do to respond? Think about products, experiences, communication, language, and representation.',
   },
   {
     id: 2,
-    title: 'Technology & AI Transformation',
-    subtitle: 'How artificial intelligence, automation & emerging tech are redefining financial services',
+    title: 'The Technological Side',
+    subtitle:
+      'Technology is no longer just a cost-reduction function — it is the primary interface through which consumers experience financial services',
     color: '#8b5cf6',
     gradient: 'from-violet-500 to-purple-700',
     icon: 'Cpu',
     overview: {
-      headline: 'Intelligence is becoming the infrastructure',
+      headline:
+        'The question isn\'t whether technology replaces relationships — it\'s how it augments them',
       description:
-        'Artificial intelligence, machine learning, and emerging technologies are not just tools — they are becoming the foundation upon which the next era of financial services will be built. From underwriting to customer engagement, every function is being reimagined.',
+        'Technology is no longer just a cost-reduction function; it is the primary interface through which consumers experience financial services. As we move forward, AI, real-time expectations, and digital distribution are converging to reshape how financial advice is delivered and received. Yet financial services is a relationship and trust-based industry. So, the question isn\'t whether technology replaces relationships, it\'s how it augments them.',
       keyPoints: [
-        'AI is moving from back-office automation to front-line decision making',
-        'Hyper-personalization at scale is now technically possible',
-        'Embedded finance is blurring industry boundaries',
-        'The cost of intelligence is approaching zero',
+        'AI is shifting from a cost-reduction tool to the primary interface for advice, service, and personalization',
+        'The advisor channel is shrinking; the future belongs to hybrid models augmenting human relationships with digital reach',
+        'Consumers expect immediacy and transparency from all their service providers',
+        'Data stewardship is shifting from a compliance burden to a competitive advantage',
       ],
     },
     factors: [
       {
-        name: 'Generative AI',
-        description: 'Large language models are transforming how financial products are designed and delivered',
-        stat: '75%',
-        statLabel: 'of financial services firms are investing in GenAI initiatives',
+        name: 'AI: From Back-Office to Front-Office',
+        description:
+          'AI will shift from a cost reduction tool to the primary interface through which consumers experience advice, service, and personalization.',
+        stat: '2.5B',
+        statLabel:
+          'interactions handled by Bank of America\'s AI assistant "Erica" since launch; 20M+ clients use it regularly',
       },
       {
-        name: 'Embedded Finance',
-        description: 'Financial services are being woven into non-financial platforms and experiences',
-        stat: '$7.2T',
-        statLabel: 'projected embedded finance market by 2030',
+        name: 'Digital Distribution Reshaping Advisors',
+        description:
+          'The advisor channel is shrinking; the future belongs to hybrid models that augment human relationship with digital reach and AI-enabled personalization.',
+        stat: '38%',
+        statLabel:
+          'of the financial advisor workforce expected to retire in the next decade — 110,000+ advisors managing ~42% of industry assets',
       },
       {
-        name: 'Predictive Analytics',
-        description: 'Advanced modeling can anticipate customer needs before they arise',
-        stat: '40%',
-        statLabel: 'reduction in claims processing time through AI',
+        name: 'Real-Time Expectations',
+        description:
+          'Consumers have been trained to expect immediacy and transparency from all their service providers.',
+        stat: '64%',
+        statLabel:
+          'of consumers prefer personalized experiences, yet only 26% trust organizations to handle their data responsibly',
       },
       {
-        name: 'Digital Infrastructure',
-        description: 'Cloud-native platforms enable rapid innovation and scaling',
-        stat: '92%',
-        statLabel: 'of financial institutions have a cloud strategy',
+        name: 'Privacy, Trust & Identity as Infrastructure',
+        description:
+          'The ability to personalize without eroding trust turns data stewardship from a compliance burden to a competitive advantage.',
+        stat: '61%',
+        statLabel:
+          'of consumers now prioritize trustworthy information above all other factors; trust is the primary driver of loyalty',
       },
     ],
     articles: [
       {
-        title: 'How AI Is Revolutionizing Insurance Underwriting',
+        title: 'How Bank of America\'s "Erica" Became the Blueprint for AI in Finance',
+        source: 'American Banker',
+        url: '#',
+        summary:
+          'With over 2.5 billion interactions and 20 million regular users, BofA\'s AI assistant is proving that AI can be the primary interface for financial services without destroying trust.',
+      },
+      {
+        title: 'The Advisor Workforce Crisis: 110,000 Retirements and Counting',
+        source: 'InvestmentNews',
+        url: '#',
+        summary:
+          '38% of financial advisors are expected to retire in the next decade, managing 42% of total industry assets — forcing the industry toward hybrid human-digital models.',
+      },
+      {
+        title: 'The Personalization Paradox: Consumers Want It but Don\'t Trust It',
         source: 'McKinsey & Company',
         url: '#',
-        summary: 'AI-powered underwriting is reducing processing times from weeks to minutes while improving accuracy and risk assessment.',
-      },
-      {
-        title: 'The Embedded Finance Revolution',
-        source: 'Bain & Company',
-        url: '#',
-        summary: 'Financial products are being seamlessly integrated into non-financial platforms, creating new distribution channels.',
-      },
-      {
-        title: 'Generative AI in Financial Services: From Hype to Reality',
-        source: 'Deloitte',
-        url: '#',
-        summary: 'Financial services firms are moving past experimentation and deploying GenAI across customer service, compliance, and product development.',
+        summary:
+          '64% of consumers prefer personalized experiences, yet only 26% trust organizations to handle their personal data responsibly — creating a critical tension for financial services.',
       },
     ],
     companies: [
       {
         name: 'Lemonade',
-        description: 'Uses AI to handle claims in seconds, processing 30% of claims without human intervention',
-        category: 'AI-Powered Insurance',
+        description:
+          'AI-powered insurance processing 30% of claims without human intervention, demonstrating AI as a front-office interface',
+        category: 'AI-First Insurance',
       },
       {
-        name: 'Wealthfront',
-        description: 'Automated financial planning using sophisticated algorithms and tax-optimization strategies',
-        category: 'Robo-Advisory',
+        name: 'Holistiplan',
+        description:
+          'AI-powered tax planning tool for advisors, augmenting human expertise with instant analysis rather than replacing it',
+        category: 'Advisor Augmentation',
       },
       {
-        name: 'Stripe',
-        description: 'Enabling embedded financial services through developer-friendly APIs and infrastructure',
-        category: 'Embedded Finance',
+        name: 'Hearsay Systems',
+        description:
+          'Digital engagement platform enabling advisors to scale personalized relationships across digital channels',
+        category: 'Digital Distribution',
       },
     ],
     exercisePrompt:
-      'How should Brighthouse Financial leverage technology and AI to transform its products, operations, and customer experience? Consider both near-term wins and long-term bets.',
+      'Given that AI is moving to the front office, the advisor workforce is shrinking, and consumers demand both personalization and trust — what should Brighthouse Financial do to respond? Think about how technology can augment (not replace) relationships, new distribution models, and data strategy.',
   },
   {
     id: 3,
-    title: 'Regulatory & Trust Landscape',
-    subtitle: 'How evolving regulations, data privacy & institutional trust are creating new imperatives',
+    title: 'The Market Side',
+    subtitle:
+      'The economic environment has shifted from predictable to volatile — reshaping both what insurers can offer and what consumers demand',
     color: '#ec4899',
     gradient: 'from-pink-500 to-rose-600',
-    icon: 'Shield',
+    icon: 'TrendingUp',
     overview: {
-      headline: 'Trust is the new competitive advantage',
+      headline:
+        'Volatility is the new normal — and it cuts both ways',
       description:
-        'In an era of data breaches, misinformation, and regulatory complexity, the ability to earn and maintain trust is becoming the single most important differentiator for financial institutions. Regulation is evolving to protect consumers, and companies that lead on trust will win.',
+        'The economic environment has shifted from predictable to volatile. Interest rates, geopolitical tensions, and fiscal uncertainty are reshaping both what insurers can offer and what consumers demand. Volatility is increasing appetite for guarantees and protections, but it\'s also making those promises harder to price and back.',
       keyPoints: [
-        'Data privacy regulations are expanding globally and becoming more stringent',
-        'Consumer trust in institutions is fragile and hard to rebuild',
-        'Transparency and explainability are becoming mandatory, not optional',
-        'ESG and fiduciary standards are converging',
+        'The era of predictable rate trajectories and stable geopolitics is over',
+        'Political, economic and geopolitical anxiety is increasing the psychological premium on guarantees',
+        'The level and direction of interest rates directly determines what products are viable',
+        'The structural shift toward private credit and illiquid assets creates new opportunities and new risks',
       ],
     },
     factors: [
       {
-        name: 'Data Privacy',
-        description: 'New regulations are giving consumers more control over their personal data',
-        stat: '71%',
-        statLabel: 'of consumers would stop doing business after a data breach',
+        name: 'Permanent Macro Volatility',
+        description:
+          'The era of predictable rate trajectories and stable geopolitics is over; both insurers and consumers must plan for a wider range of outcomes.',
+        stat: '6 in 10',
+        statLabel:
+          'consumers said they were very concerned about the economy by end of Q1 2025 — a 14-point increase from January',
       },
       {
-        name: 'Regulatory Complexity',
-        description: 'Financial regulation is increasing in scope, speed, and sophistication',
-        stat: '300+',
-        statLabel: 'regulatory changes per day that financial firms must track',
+        name: 'Global Instability Drives Demand for Safety',
+        description:
+          'Political, economic and geopolitical anxiety is increasing the psychological premium consumers place on protection and guarantees.',
+        stat: '$100B+',
+        statLabel:
+          'U.S. annuity sales exceeded $100 billion for 8 consecutive quarters through Q3 2025 — a "new normal"',
       },
       {
-        name: 'Transparency Demands',
-        description: 'Consumers and regulators demand clear, understandable financial products',
-        stat: '89%',
-        statLabel: 'of consumers say transparency is important when choosing a financial provider',
+        name: 'Rate Environment Shaping the Product Shelf',
+        description:
+          'The level and direction of interest rates directly determines what products are viable.',
+        stat: '38%',
+        statLabel:
+          'surge in RILA sales as rates fell in 2024; fixed-rate deferred annuities dropped 7%, fixed indexed grew 32%',
       },
       {
-        name: 'Institutional Trust',
-        description: 'Trust in financial institutions remains low, creating opportunity for differentiation',
-        stat: '33%',
-        statLabel: 'of consumers trust their financial services provider "a great deal"',
+        name: 'Alternate Assets Reshaping Insurer Balance Sheets',
+        description:
+          'The structural shift towards private credit and illiquid assets is creating new yield opportunities but introducing concentration and liquidity risks.',
+        stat: '38%',
+        statLabel:
+          'of life/annuity insurer portfolios now in private placements, mortgage loans, real estate & Schedule BA assets — up from 30% in 2018',
       },
     ],
     articles: [
       {
-        title: 'The Global Push for AI Regulation in Financial Services',
-        source: 'Reuters',
+        title: 'Annuity Sales Shatter Records as Consumers Seek Certainty',
+        source: 'LIMRA',
         url: '#',
-        summary: 'Regulators worldwide are racing to create frameworks for AI use in financial services, with implications for automation and decision-making.',
+        summary:
+          'U.S. annuity sales have exceeded $100 billion for 8 consecutive quarters through Q3 2025, driven by consumer demand for guaranteed income in uncertain times.',
       },
       {
-        title: 'Why Trust Is the New Currency in Financial Services',
-        source: 'Edelman Trust Barometer',
-        url: '#',
-        summary: 'The latest trust data shows that financial services still ranks among the least trusted industries, but leaders are emerging.',
-      },
-      {
-        title: 'Data Privacy Laws Are Reshaping How Insurers Operate',
+        title: 'How Falling Rates Are Reshaping the Insurance Product Shelf',
         source: 'Insurance Journal',
         url: '#',
-        summary: 'New privacy regulations are forcing insurers to rethink how they collect, store, and use customer data.',
+        summary:
+          'As interest rates fell in 2024, product mix shifted dramatically: fixed-rate deferred annuities dropped 7% while RILAs surged 38% and fixed indexed annuities grew 32%.',
+      },
+      {
+        title: 'The Private Credit Boom in Insurance: Opportunity and Risk',
+        source: 'Financial Times',
+        url: '#',
+        summary:
+          'Life and annuity insurer allocations to private placements and illiquid assets have risen to 38% of total portfolios, up from 30% in 2018, raising questions about concentration risk.',
       },
     ],
     companies: [
       {
-        name: 'OneTrust',
-        description: 'Privacy management platform helping companies navigate complex regulatory requirements',
-        category: 'Privacy & Compliance',
+        name: 'Athene (Apollo)',
+        description:
+          'Pioneering the use of private credit and alternative assets to back annuity guarantees with higher yields',
+        category: 'Alternative Asset Strategy',
       },
       {
-        name: 'Ethic',
-        description: 'Investment platform that builds personalized, sustainable portfolios aligned with client values',
-        category: 'Ethical Investing',
+        name: 'Global Atlantic',
+        description:
+          'Rapidly scaling through reinsurance and alternative asset strategies to offer competitive guaranteed products',
+        category: 'Reinsurance & Scale',
       },
       {
-        name: 'Haven Life',
-        description: 'Simplified, transparent life insurance with a fully online application and clear pricing',
-        category: 'Transparent Insurance',
+        name: 'F&G (Fidelity National)',
+        description:
+          'Aggressive RILA and indexed annuity innovation, riding the shift from fixed-rate to market-linked products',
+        category: 'Product Innovation',
       },
     ],
     exercisePrompt:
-      'How should Brighthouse Financial build and leverage trust as a competitive advantage? Consider transparency, data ethics, regulatory positioning, and customer communication.',
+      'Given permanent macro volatility, record demand for guarantees, a shifting rate environment, and the move toward alternative assets — what should Brighthouse Financial do to respond? Think about product strategy, pricing, risk management, and how to position guarantees in an uncertain world.',
   },
   {
     id: 4,
-    title: 'The Future of Work & Wealth',
-    subtitle: 'How changing work patterns, income volatility & wealth inequality are redefining financial needs',
+    title: 'The Competitive Side',
+    subtitle:
+      'Simplicity, trust, and product innovation have overtaken product features as the primary battlegrounds',
     color: '#f59e0b',
     gradient: 'from-amber-500 to-orange-600',
-    icon: 'TrendingUp',
+    icon: 'Target',
     overview: {
-      headline: 'Work is being reinvented — and so must financial protection',
+      headline:
+        'The rules of competition are being rewritten',
       description:
-        'The gig economy, remote work, career fluidity, and rising income volatility are fundamentally changing how people earn, save, and plan for the future. Traditional financial products designed for stable, linear careers are increasingly misaligned with reality.',
+        'The competitive landscape is seeing massive shifts in what consumers value and how they discover, evaluate, and buy financial products. Simplicity, trust, and product innovation have overtaken product features as the primary battlegrounds. This exists within an industry-wide arms race for top advisors — who can spell the difference between winning and losing — amidst a growing workforce shortfall. At the same time, non-traditional players and aggressive consolidation are compressing competition.',
       keyPoints: [
-        'The gig economy and non-traditional employment are accelerating',
-        'Income volatility is increasing across all demographics',
-        'Retirement is being redefined as career patterns shift',
-        'Wealth inequality is creating divergent financial needs',
+        'How consumers find and choose products has changed (TikTok, Reddit) — clarity and credibility are king',
+        'The annuity industry is evolving rapidly with products like RILAs, and carriers are broadening product shelves',
+        'Insurtechs are raising the bar on experience while M&A is concentrating scale into fewer, larger players',
+        'The industry is in an escalating war for experienced advisors against a structural workforce shortfall',
       ],
     },
     factors: [
       {
-        name: 'Gig Economy Growth',
-        description: 'Non-traditional work arrangements are becoming the norm for millions',
-        stat: '36%',
-        statLabel: 'of the US workforce now participates in the gig economy',
+        name: 'Simplicity, Trust & Discovery',
+        description:
+          'How consumers find and choose products has changed (e.g., TikTok, Reddit) and is focused on clarity and credibility.',
+        stat: '4.5B+',
+        statLabel:
+          'views on the #FinTok hashtag — consumers are discovering financial products through social media',
       },
       {
-        name: 'Income Volatility',
-        description: 'Unpredictable income makes traditional financial planning models obsolete',
-        stat: '50%',
-        statLabel: 'of Americans experience significant income fluctuation year to year',
+        name: 'Product Innovation Is Accelerating',
+        description:
+          'The annuity industry is evolving into products like RILAs, with carriers broadening product shelves and opening new channels.',
+        stat: '$65.6B',
+        statLabel:
+          'RILA sales in 2024, up from just $3.7B in 2015; LIMRA projects they\'ll exceed $75B in 2025',
       },
       {
-        name: 'Retirement Redefined',
-        description: 'Linear career paths and traditional retirement timelines are disappearing',
-        stat: '55%',
-        statLabel: 'of workers expect to work past traditional retirement age',
+        name: 'Non-Traditional Players & Consolidation',
+        description:
+          'Insurtechs are raising the bar on experience while aggressive M&A is concentrating scale and distribution into fewer, larger players.',
+        stat: '$66.7B',
+        statLabel:
+          'projected U.S. insurtech market by 2029, up from $49.8B in 2024',
       },
       {
-        name: 'Wealth Gap',
-        description: 'Growing inequality creates vastly different financial needs across segments',
-        stat: '10x',
-        statLabel: 'increase in wealth gap between top and bottom quintiles since 1989',
+        name: 'The Arms Race for Advisors',
+        description:
+          'The industry is in an escalating war for experienced advisors — who can spell the difference between winning and losing — against a structural workforce shortfall.',
+        stat: '90K-110K',
+        statLabel:
+          'advisor shortfall projected by McKinsey by 2034; 38% of the current workforce expected to retire in the next decade',
       },
     ],
     articles: [
       {
-        title: 'How the Gig Economy Is Rewriting the Rules of Financial Planning',
+        title: '#FinTok: How TikTok Is Changing How People Discover Financial Products',
         source: 'Wall Street Journal',
         url: '#',
-        summary: 'With millions of workers lacking employer-sponsored benefits, new models for insurance and retirement savings are emerging.',
+        summary:
+          'With 4.5 billion views, #FinTok is reshaping how consumers — especially younger ones — discover, evaluate, and trust financial products and advice.',
       },
       {
-        title: 'The End of Retirement as We Know It',
-        source: 'The Economist',
+        title: 'The RILA Revolution: From $3.7B to $75B in a Decade',
+        source: 'LIMRA',
         url: '#',
-        summary: 'Longer lifespans, shifting career patterns, and inadequate savings are forcing a rethink of what retirement means.',
+        summary:
+          'Registered index-linked annuity sales have exploded from $3.7 billion in 2015 to $65.6 billion in 2024, with projections to exceed $75 billion in 2025.',
       },
       {
-        title: 'Income Volatility: The Hidden Financial Crisis',
-        source: 'Brookings Institution',
+        title: 'The Coming Advisor Shortage Could Reshape Financial Services',
+        source: 'McKinsey & Company',
         url: '#',
-        summary: 'Research shows that income instability affects financial decision-making, health outcomes, and long-term wealth building.',
+        summary:
+          'McKinsey projects a shortfall of 90,000–110,000 advisors by 2034 as 38% of the current workforce retires, creating an existential distribution challenge.',
       },
     ],
     companies: [
       {
-        name: 'Stride Health',
-        description: 'Health insurance and benefits platform designed specifically for independent workers',
-        category: 'Gig Worker Benefits',
+        name: 'Gainbridge',
+        description:
+          'Direct-to-consumer annuity platform bypassing traditional distribution and emphasizing simplicity and transparency',
+        category: 'D2C Distribution',
       },
       {
-        name: 'Even',
-        description: 'Income smoothing and financial planning for workers with variable pay',
-        category: 'Income Stability',
+        name: 'Annexus Group',
+        description:
+          'Product innovation engine creating next-generation indexed insurance and annuity solutions for major carriers',
+        category: 'Product Innovation',
       },
       {
-        name: 'Guideline',
-        description: 'Modern 401(k) platform making retirement savings accessible to small businesses and their employees',
-        category: 'Retirement Innovation',
+        name: 'Carson Group',
+        description:
+          'Advisor platform combining wealth management technology with practice management to attract and retain top advisors',
+        category: 'Advisor Platform',
       },
     ],
     exercisePrompt:
-      'How should Brighthouse Financial adapt its products and strategy to serve a workforce with increasingly non-traditional employment patterns and volatile income? Consider new products, distribution, and partnerships.',
+      'Given shifting discovery channels, accelerating product innovation (especially RILAs), growing insurtech competition, M&A consolidation, and the advisor shortage — what should Brighthouse Financial do to respond? Think about distribution strategy, product innovation, advisor value proposition, and brand positioning.',
   },
 ]
 
@@ -349,25 +413,25 @@ export const workshopInfo = {
     {
       name: 'Hugh',
       role: 'Presenter',
-      image: null, // Placeholder for headshot
+      image: '/images/hugh.jpg', // Place headshot at public/images/hugh.jpg
     },
     {
       name: 'Evan',
       role: 'Presenter',
-      image: null,
+      image: '/images/evan.jpg', // Place headshot at public/images/evan.jpg
     },
     {
       name: 'Shaun',
       role: 'Presenter',
-      image: null,
+      image: '/images/shaun.jpg', // Place headshot at public/images/shaun.jpg
     },
   ],
   agenda: [
     { time: '', label: 'Welcome & Introduction', icon: 'Sparkles' },
-    { time: '', label: 'Domain 1: The Evolving Consumer', icon: 'Users' },
-    { time: '', label: 'Domain 2: Technology & AI Transformation', icon: 'Cpu' },
-    { time: '', label: 'Domain 3: Regulatory & Trust Landscape', icon: 'Shield' },
-    { time: '', label: 'Domain 4: The Future of Work & Wealth', icon: 'TrendingUp' },
-    { time: '', label: 'Strategic Priorities & Next Steps', icon: 'Target' },
+    { time: '', label: 'Domain 1: The Human Side', icon: 'Heart' },
+    { time: '', label: 'Domain 2: The Technological Side', icon: 'Cpu' },
+    { time: '', label: 'Domain 3: The Market Side', icon: 'TrendingUp' },
+    { time: '', label: 'Domain 4: The Competitive Side', icon: 'Target' },
+    { time: '', label: 'Strategic Priorities & Next Steps', icon: 'Sparkles' },
   ],
 }

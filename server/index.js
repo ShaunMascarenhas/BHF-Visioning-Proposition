@@ -43,24 +43,24 @@ const workshopData = {
 // Domain context for AI and news matching
 const domainContext = {
   1: {
-    name: 'The Evolving Consumer',
-    keywords: 'consumer behavior finance fintech demographics gen-z millennials digital banking financial wellness personalization trust wealth transfer',
-    description: 'How expectations, demographics & digital nativity are reshaping financial relationships',
+    name: 'The Human Side',
+    keywords: 'wealth transfer generational inheritance women financial decision longevity retirement anxiety cognitive overload financial planning consumer behavior insurance annuity',
+    description: 'The financial lives people are planning for are longer, more complex, and more anxiety-inducing than ever before. Women are controlling more wealth, a massive generational transfer is underway, and cognitive overload is paralyzing consumers.',
   },
   2: {
-    name: 'Technology & AI Transformation',
-    keywords: 'artificial intelligence fintech automation machine learning embedded finance insurtech digital transformation AI insurance',
-    description: 'How AI, automation & emerging tech are redefining financial services',
+    name: 'The Technological Side',
+    keywords: 'artificial intelligence AI financial advisor digital distribution personalization trust data privacy fintech insurance technology automation robo-advisor',
+    description: 'Technology is the primary interface through which consumers experience financial services. AI, real-time expectations, and digital distribution are reshaping how advice is delivered, while trust and data stewardship become competitive advantages.',
   },
   3: {
-    name: 'Regulatory & Trust Landscape',
-    keywords: 'financial regulation data privacy compliance ESG trust transparency insurance regulation consumer protection',
-    description: 'How evolving regulations, data privacy & institutional trust are creating new imperatives',
+    name: 'The Market Side',
+    keywords: 'interest rates volatility annuity sales RILA indexed annuity geopolitical uncertainty insurance guarantees private credit alternative assets macro economy',
+    description: 'The economic environment has shifted from predictable to volatile. Interest rates, geopolitical tensions, and fiscal uncertainty are reshaping what insurers can offer and what consumers demand. Record annuity sales reflect demand for guarantees.',
   },
   4: {
-    name: 'The Future of Work & Wealth',
-    keywords: 'gig economy remote work income volatility retirement wealth inequality financial planning benefits insurance',
-    description: 'How changing work patterns, income volatility & wealth inequality are redefining financial needs',
+    name: 'The Competitive Side',
+    keywords: 'financial advisor shortage insurtech consolidation M&A RILA product innovation distribution simplicity trust TikTok FinTok annuity competition insurance',
+    description: 'Simplicity, trust, and product innovation have overtaken features as battlegrounds. Non-traditional players, aggressive M&A, and a structural advisor shortage are compressing competition while consumers discover products through new channels like TikTok.',
   },
 }
 
@@ -144,10 +144,10 @@ app.get('/api/news/:domainId', async (req, res) => {
   try {
     // Build a targeted search query for this domain intersecting with finance
     const searchQueries = {
-      1: '"financial services" AND (consumer OR demographics OR "gen z" OR millennial OR "digital banking")',
-      2: '"artificial intelligence" AND (finance OR insurance OR fintech OR "financial services")',
-      3: '(regulation OR "data privacy" OR compliance OR trust) AND ("financial services" OR insurance OR banking)',
-      4: '("gig economy" OR "future of work" OR "income volatility" OR retirement) AND (finance OR insurance OR "financial planning")',
+      1: '("wealth transfer" OR "women investors" OR "financial anxiety" OR longevity) AND (insurance OR annuity OR "financial planning")',
+      2: '("artificial intelligence" OR "AI advisor" OR "digital distribution") AND (insurance OR annuity OR "financial services")',
+      3: '("annuity sales" OR "interest rates" OR "market volatility" OR RILA) AND (insurance OR "life insurance" OR annuity)',
+      4: '("advisor shortage" OR insurtech OR "product innovation" OR FinTok) AND (insurance OR annuity OR "financial services")',
     }
 
     const query = searchQueries[domainId] || domain.keywords

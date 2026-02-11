@@ -6,6 +6,8 @@ import {
   Cpu,
   Shield,
   TrendingUp,
+  Heart,
+  Target,
   ExternalLink,
   Lightbulb,
   BarChart3,
@@ -22,7 +24,7 @@ import IdeaForm from '../components/IdeaForm'
 import IdeaCard from '../components/IdeaCard'
 import useWorkshopStore from '../store/useWorkshopStore'
 
-const iconMap = { Users, Cpu, Shield, TrendingUp }
+const iconMap = { Users, Cpu, Shield, TrendingUp, Heart, Target }
 
 function OverviewSlide({ domain }) {
   const Icon = iconMap[domain.icon] || Users

@@ -7,6 +7,7 @@ import {
   TrendingUp,
   Sparkles,
   Target,
+  Heart,
   ArrowRight,
   ChevronRight,
 } from 'lucide-react'
@@ -20,6 +21,7 @@ const iconMap = {
   TrendingUp,
   Sparkles,
   Target,
+  Heart,
 }
 
 const containerVariants = {
