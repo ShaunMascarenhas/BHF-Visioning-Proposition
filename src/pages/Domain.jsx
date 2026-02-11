@@ -141,38 +141,41 @@ function FactorsSlide({ domain }) {
           <span style={{ color: domain.color }}>{domain.title}</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Clean row layout */}
+        <div className="space-y-0">
           {domain.factors.map((factor, i) => (
-            <GlassCard
+            <motion.div
               key={i}
-              hover
-              delay={0.2 + i * 0.1}
-              className="p-6"
-              accentColor={domain.color}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 + i * 0.1 }}
+              className="group flex items-stretch border-t border-white/[0.06] last:border-b"
             >
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="font-heading font-semibold text-white/90">
+              {/* Left: factor name & description */}
+              <div className="flex-1 py-6 pr-8">
+                <h3 className="font-heading font-semibold text-white/90 text-lg mb-1.5">
                   {factor.name}
                 </h3>
+                <p className="text-white/40 text-sm leading-relaxed">
+                  {factor.description}
+                </p>
               </div>
-              <p className="text-white/50 text-sm mb-4 leading-relaxed">
-                {factor.description}
-              </p>
+
+              {/* Right: stat block */}
               <div
-                className="border-t pt-4"
-                style={{ borderColor: `${domain.color}15` }}
+                className="w-48 md:w-64 flex-shrink-0 flex flex-col justify-center py-6 pl-8 border-l border-white/[0.06]"
               >
                 <span
-                  className="font-heading text-3xl font-bold"
+                  className="font-heading text-3xl md:text-4xl font-bold leading-none"
                   style={{ color: domain.color }}
                 >
                   {factor.stat}
                 </span>
-                <p className="text-white/40 text-xs mt-1">
+                <p className="text-white/35 text-xs mt-2 leading-snug">
                   {factor.statLabel}
                 </p>
               </div>
-            </GlassCard>
+            </motion.div>
           ))}
         </div>
       </div>
