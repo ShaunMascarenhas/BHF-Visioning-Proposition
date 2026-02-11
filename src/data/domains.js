@@ -61,29 +61,33 @@ export const domains = [
         title: 'The $124 Trillion Great Wealth Transfer Is Bigger Than Ever — and Millennials Will Get the Biggest Cut',
         source: 'Fortune',
         url: 'https://fortune.com/2025/07/23/great-wealth-transfer-124-trillion-bigger-than-ever-millennials-gen-x/',
+        imageUrl: 'https://fortune.com/img-assets/wp-content/uploads/2025/07/GettyImages-1534753790-e1753264102697.jpg',
         summary:
-          'Cerulli projects $124 trillion will transfer through 2048 — up from earlier $84T estimates. Gen X will inherit $1.4T/year; Millennials $46T total. Heirs have radically different expectations and brand loyalty.',
+          'Cerulli projects $124 trillion will transfer through 2048 — up from earlier $84T estimates. Gen X will inherit $1.4T/year; Millennials $46T total. Heirs have radically different expectations.',
       },
       {
-        title: 'The Great Wealth Transfer: How Women Can Make the Most of It',
-        source: 'World Economic Forum',
-        url: 'https://www.weforum.org/stories/2024/07/women-inheritance-great-wealth-transfer/',
+        title: 'Help Women Become the CFOs of Their Own Lives',
+        source: 'InsuranceNewsNet',
+        url: 'https://insurancenewsnet.com/innarticle/help-women-become-the-cfos-of-their-own-lives',
+        imageUrl: 'https://insurancenewsnet.com/wp-content/uploads/2025/04/Help-women-become-the-CFOs-of-their-own-lives.jpg',
         summary:
-          '$54 trillion will first transfer between spouses, with $40 trillion going to widowed Boomer women. By 2030, women will control $34T in assets — yet 84% lack confidence managing an inheritance.',
+          'Women now control more than 51% of U.S. personal wealth. Younger women will receive $47 trillion in inherited wealth by 2048 — yet products, language, and advisory relationships aren\'t calibrated for them.',
       },
       {
-        title: 'Financial Strategies for Women Navigating the Great Wealth Transfer',
-        source: 'UBS',
-        url: 'https://www.ubs.com/us/en/wealth-management/who-we-serve/specialized-advice/women-and-finances/articles/how-women-prepare-great-wealth-transfer.html',
+        title: 'Implementing Best Practices During the Great Wealth Transfer',
+        source: 'InsuranceNewsNet',
+        url: 'https://insurancenewsnet.com/innarticle/implementing-best-practices-during-the-great-wealth-transfer',
+        imageUrl: 'https://insurancenewsnet.com/wp-content/uploads/2025/06/Implementing-best-practices-during-the-Great-Wealth-Transfer.jpg',
         summary:
-          '80% of women who inherited assets faced challenges; 83% of recently widowed women report wealth transfer difficulties. Only 49% of women have opened their own investment account vs. two-thirds of men.',
+          'Spouses will inherit over $50 trillion, the vast majority going to women. Millennials will inherit the most of any generation ($46T). 89% of firms say regular family communication is a key best practice.',
       },
       {
-        title: 'Preparing for the Great Wealth Transfer',
-        source: 'U.S. Bank',
-        url: 'https://www.usbank.com/wealth-management/financial-perspectives/women-and-money/women-and-great-wealth-transfer.html',
+        title: 'With the Great Wealth Transfer Underway, Tools Include Life Insurance and Gifting Strategies',
+        source: 'InsuranceNewsNet',
+        url: 'https://insurancenewsnet.com/innarticle/with-the-great-wealth-transfer-underway-tools-include-life-insurance-gifting-strategies',
+        imageUrl: 'https://insurancenewsnet.com/wp-content/uploads/2025/08/Wealth-transfer-tools-include-life-insurance-gifting-strategies.jpg',
         summary:
-          'Older households now control 61% of national wealth (up from 54% three years ago). Only a quarter of families have discussed generational transfer, and 38% of women have no plan to start.',
+          '50%+ of consumers expecting an inheritance see it as "critical" to their long-term security. Yet 70% of affluent families lose wealth by the second generation — creating urgency for better planning.',
       },
     ],
     companies: [
@@ -165,32 +169,36 @@ export const domains = [
     ],
     articles: [
       {
-        title: 'AI Transformation in Financial Services: 5 Predictors for Success in 2026',
-        source: 'Microsoft',
-        url: 'https://www.microsoft.com/en-us/industry/blog/financial-services/2025/12/18/ai-transformation-in-financial-services-5-predictors-for-success-in-2026/',
+        title: 'How AI and Tech Will Impact Insurers in 2025',
+        source: 'InsuranceNewsNet',
+        url: 'https://insurancenewsnet.com/innarticle/how-ai-and-tech-will-impact-insurers-in-2025',
+        imageUrl: 'https://insurancenewsnet.com/wp-content/uploads/2024/12/How-AI-and-tech-will-impact-insurers-in-2025.jpg',
         summary:
-          'Financial services has the highest concentration of "Frontier Firms" embedding AI agents across every workflow. These firms report AI investment returns 3x higher than slow adopters.',
+          'AI will disrupt traditional insurance outsourcing by automating routine tasks, cutting outsourcing jobs in half within three years. Intelligent workflow agents will dramatically change work design across the industry.',
       },
       {
-        title: 'Insurers Accelerate AI Rollout as OpenAI Demand Surges',
-        source: 'Fintech Global',
-        url: 'https://fintech.global/2025/12/05/insurers-accelerate-ai-rollout-as-openai-demand-surges/',
+        title: 'The Transformational Potential of AI for Advisors',
+        source: 'InsuranceNewsNet',
+        url: 'https://insurancenewsnet.com/innarticle/the-transformational-potential-of-ai-for-advisors',
+        imageUrl: 'https://insurancenewsnet.com/wp-content/uploads/2024/12/The-transformational-potential-of-AI-for-advisors.jpg',
         summary:
-          'Major insurers are deploying generative AI as a core operating system for fraud detection, claims handling, customer support, and risk analytics — shifting AI from back-office to front-office.',
+          'AI will augment the human advisor, not replace it. Digital transformations have been commonplace for a decade, with AI driving the latest iteration — but legacy systems continue to pose challenges.',
       },
       {
-        title: 'Artificial Intelligence in Financial Services',
-        source: 'World Economic Forum',
-        url: 'https://reports.weforum.org/docs/WEF_Artificial_Intelligence_in_Financial_Services_2025.pdf',
+        title: 'How AI Is Transforming the Financial Planning Profession',
+        source: 'InvestmentNews',
+        url: 'https://www.investmentnews.com/fintech/how-ai-is-transforming-the-financial-planning-profession/262360',
+        imageUrl: 'https://cdn-res.keymedia.com/cms/images/in/leoa_638950171283647813.png',
         summary:
-          'Comprehensive analysis of AI\'s pivot from cost-reduction to primary consumer interface. JPMorgan has allocated $18B to technology in 2025, with AI tools used by 200,000+ employees achieving 30% cost reduction.',
+          '33% of advisors now use AI in their practices and 42% are experimenting. AI isn\'t replacing judgment or trust — but as it takes over admin tasks, advisors can focus on delivering expertise.',
       },
       {
-        title: 'AI Integration in Financial Services: Trends and Regulatory Challenges',
-        source: 'Nature',
-        url: 'https://www.nature.com/articles/s41599-025-04850-8',
+        title: 'The "Advisory Firm of 1" — AI Will Change How Your Wealth Is Managed',
+        source: 'CNBC',
+        url: 'https://www.cnbc.com/2025/08/05/op-ed-the-advisory-firm-of-1-ai-will-change-how-your-wealth-is-managed.html',
+        imageUrl: null,
         summary:
-          'Systematic review of AI adoption from 1989–2024 across credit scoring, fraud detection, and robo-advisory. Data security is the leading barrier — cited by 33% of firms — underscoring the trust-personalization tension.',
+          'A single advisor supported by autonomous AI agents represents the inevitable future. Lower cost of delivery will make quality financial advice accessible to middle-income families and younger generations.',
       },
     ],
     companies: [
@@ -272,32 +280,36 @@ export const domains = [
     ],
     articles: [
       {
-        title: '2024 Retail Annuity Sales Grow 13% to a Record $434.1 Billion',
-        source: 'LIMRA',
-        url: 'https://www.limra.com/en/newsroom/news-releases/2025/limra-2024-retail-annuity-sales-grow-12-to-a-record-$434.1-billion/',
+        title: 'LIMRA: 2024 Retail Annuity Sales Set $432B Record, But How Does 2025 Look?',
+        source: 'InsuranceNewsNet',
+        url: 'https://insurancenewsnet.com/innarticle/limra-2024-retail-annuity-sales-set-432b-record-but-how-does-2025-look',
+        imageUrl: 'https://insurancenewsnet.com/wp-content/uploads/2025/01/LIMRA-2024-Retail-Annuity-Sales-Power-to-a-Record-432-Billion.jpg',
         summary:
-          'Total annuity sales surpassed $100B in all four quarters of 2024 — a first. Three consecutive record years totaling $1.1 trillion in sales, driven by consumer demand for guarantees amid volatility.',
+          'Total annuity sales surpassed $100B in all four quarters of 2024 — a first. Three consecutive record years totaling $1.1 trillion, driven by consumer demand for guarantees amid permanent volatility.',
       },
       {
-        title: 'U.S. Annuity Sales Set New Record in First Half of 2025',
-        source: 'LIMRA',
-        url: 'https://www.limra.com/en/newsroom/news-releases/2025/limra-u.s.-annuity-sales-set-new-record-in-first-half-of-2025/',
+        title: 'Annuity Sales Hit Record $119.5B in Q2, LIMRA Reports',
+        source: 'InsuranceNewsNet',
+        url: 'https://insurancenewsnet.com/innarticle/annuity-sales-hit-record-119-5b-in-q2-limra-reports',
+        imageUrl: 'https://insurancenewsnet.com/wp-content/uploads/2025/09/Total-us-annuity-sales-increased-8-percent-year-over-year-to-a-record-high-119-billion-in-the-second-quarter.jpg',
         summary:
-          'H1 2025 annuity sales hit $223B, 3% above prior year. Q2 2025 was the highest quarterly total ever at $116.6B. Market volatility in Q1 calmed by Q2, but demand for protected growth stayed elevated.',
+          'Q2 2025 annuity sales increased 8% year over year to $119.5B — the highest quarterly total ever. H1 2025 sales reached $226.1B, up 4% from 2024. LIMRA projects 2025 will surpass $450B.',
       },
       {
-        title: 'A Mixed Bag Likely for the U.S. Retail Annuity Market in 2025',
-        source: 'LIMRA',
-        url: 'https://www.limra.com/en/newsroom/industry-trends/2025/a-mixed-bag-likely-for-the-u.s.-retail-annuity-market-in-2025/',
+        title: '\'Economic Anxiety\' in March Boosts Slipping Annuity Sales, LIMRA Finds',
+        source: 'InsuranceNewsNet',
+        url: 'https://insurancenewsnet.com/innarticle/economic-anxiety-in-march-boosts-slipping-annuity-sales-limra-finds',
+        imageUrl: 'https://insurancenewsnet.com/wp-content/uploads/2025/04/Preliminary-Q1-annuity-sales-show-1-decline-LIMRA-reports.jpg',
         summary:
-          'Falling rates are reshaping the product shelf: fixed-rate deferred annuities dropped 7% while RILAs surged 38% and FIAs grew 31%. LIMRA projects sales will remain above $350B through 2027.',
+          'Economic anxiety is the primary demand driver — 6 in 10 consumers are very concerned about the economy. Falling rates reshaping products: RILAs surged 38% while fixed-rate deferred dropped 7%.',
       },
       {
-        title: 'U.S. Annuity Market: New Opportunities Amid Economic Uncertainty',
-        source: 'LIMRA',
-        url: 'https://www.limra.com/en/newsroom/industry-trends/2025/u.s.-annuity-market-new-opportunities-amid-economic-uncertainty/',
+        title: 'The Annuity Industry in 2025: What You Need To Know',
+        source: 'Bankrate',
+        url: 'https://www.bankrate.com/retirement/annuity-market/',
+        imageUrl: 'https://www.bankrate.com/brp/2025/01/15183709/Annuity-sales-soared-in-2024-What-investors-can-expect-in-2025.jpg',
         summary:
-          '6 in 10 consumers are very concerned about the economy. Through 2029, 4M+ people will turn 65 annually — most without pensions. Over half of pre-retirees are interested in converting assets to annuities.',
+          'Through 2029, 4M+ people turn 65 annually — most without pensions. Just half of pre-retirees believe they have enough guaranteed income. Interest in annuities remains at historic highs.',
       },
     ],
     companies: [
@@ -379,30 +391,34 @@ export const domains = [
     ],
     articles: [
       {
-        title: 'The Looming Advisor Shortage in US Wealth Management',
-        source: 'McKinsey & Company',
-        url: 'https://www.mckinsey.com/industries/financial-services/our-insights/the-looming-advisor-shortage-in-us-wealth-management',
+        title: 'Financial Advisor Shortage: The Decline of Younger Advisors & Future of the Industry',
+        source: 'Integrated Financial Group',
+        url: 'https://integrated-financial-group.com/resources/the-decline-of-younger-financial-advisors/',
+        imageUrl: 'https://integrated-financial-group.com/wp-content/uploads/2025/03/multiethnic-male-caucasian-mentor-and-female-asian-2025-01-10-05-27-02-utc-scaled.jpg',
         summary:
-          'McKinsey projects a 90,000–110,000 advisor shortfall by 2034. 51% of CFPs are over 50, the workforce grows at just 0.3% annually, and the rookie failure rate is 72%.',
+          'McKinsey projects a 90,000–110,000 advisor shortfall by 2034. Only 6% of advisors are under 30, the workforce grows at just 0.3% annually, and the rookie failure rate is 72%.',
       },
       {
         title: 'As More Americans Turn to FinTok for Financial Guidance, Experts Urge Caution',
         source: 'Wealthtender',
         url: 'https://wealthtender.com/insights/fintok/',
+        imageUrl: 'https://wealthtender.com/wp-content/uploads/2024/12/fintok.jpg',
         summary:
           '68% of FinTok users say it improved their financial situation. 71% of Gen Z report social media positively impacts financial decisions — a seismic shift in how consumers discover products.',
       },
       {
-        title: 'Corebridge Launches RILA, Becoming Only Top 3 Provider with Products in Every Major Category',
-        source: 'Corebridge Financial',
-        url: 'https://www.corebridgefinancial.com/who-we-are/newsroom/rila-annuity',
+        title: 'Jackson Grows RILA, Fixed Annuity Sales in Q2 as Product Pivot Pays Off',
+        source: 'InsuranceNewsNet',
+        url: 'https://insurancenewsnet.com/innarticle/jackson-grows-rila-fixed-annuity-sales-in-q2-as-product-pivot-pays-off',
+        imageUrl: 'https://insurancenewsnet.com/wp-content/uploads/2025/08/Jackson-Financial-q2-earnings.jpg',
         summary:
-          'RILA sales exploded from $3.7B in 2015 to $65.6B in 2024. New market entrants like Corebridge are broadening product shelves, intensifying competition across every annuity category.',
+          'RILA sales exploded from $3.7B in 2015 to $65.6B in 2024. Major carriers like Jackson are pivoting away from riskier products, intensifying competition across every annuity category.',
       },
       {
         title: '2026 Global Insurance Outlook',
         source: 'Deloitte',
         url: 'https://www.deloitte.com/us/en/insights/industry/financial-services/financial-services-industry-outlooks/insurance-industry-outlook.html',
+        imageUrl: 'https://www.deloitte.com/content/dam/insights/articles/2025/us188426_cfs_insurance-outlook-2026/primary-images/US188426_Banner-1920x880.jpg',
         summary:
           'The $49.8B U.S. insurtech market is projected to reach $66.7B by 2029. Broker consolidation, M&A activity, and digital-first models are reshaping distribution and compressing competition.',
       },

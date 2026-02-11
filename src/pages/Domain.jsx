@@ -229,46 +229,81 @@ function ArticlesSlide({ domain }) {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {articles.map((article, i) => (
-            <GlassCard
-              key={i}
-              hover
-              delay={0.2 + i * 0.1}
-              className="p-5 flex flex-col group cursor-pointer h-full"
-              accentColor={domain.color}
-              onClick={() => {
-                if (article.url && article.url !== '#') {
-                  window.open(article.url, '_blank', 'noopener')
-                }
-              }}
-            >
-              <div className="flex items-center gap-2 mb-3">
+          {articles.map((article, i) => {
+            const imgUrl = article.imageUrl || article.urlToImage || null
+            return (
+              <GlassCard
+                key={i}
+                hover
+                delay={0.2 + i * 0.1}
+                className="flex flex-col group cursor-pointer h-full overflow-hidden"
+                accentColor={domain.color}
+                onClick={() => {
+                  if (article.url && article.url !== '#') {
+                    window.open(article.url, '_blank', 'noopener')
+                  }
+                }}
+              >
+                {/* Article image or gradient fallback */}
                 <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-                  style={{ background: `${domain.color}15` }}
+                  className="w-full h-32 relative overflow-hidden shrink-0"
+                  style={
+                    imgUrl
+                      ? {}
+                      : {
+                          background: `linear-gradient(135deg, ${domain.color}25, ${domain.color}08)`,
+                        }
+                  }
                 >
-                  <ExternalLink size={14} style={{ color: domain.color }} />
+                  {imgUrl ? (
+                    <img
+                      src={imgUrl}
+                      alt=""
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      onError={(e) => {
+                        e.target.style.display = 'none'
+                        e.target.parentElement.style.background = `linear-gradient(135deg, ${domain.color}25, ${domain.color}08)`
+                      }}
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Newspaper
+                        size={32}
+                        style={{ color: domain.color }}
+                        className="opacity-20"
+                      />
+                    </div>
+                  )}
+                  {/* Source badge overlay */}
+                  <div className="absolute bottom-2 left-2">
+                    <span
+                      className="px-2 py-0.5 rounded text-[10px] font-medium backdrop-blur-md"
+                      style={{
+                        background: 'rgba(0,0,0,0.6)',
+                        color: domain.color,
+                      }}
+                    >
+                      {article.source}
+                    </span>
+                  </div>
                 </div>
-                <span
-                  className="text-xs font-medium"
-                  style={{ color: domain.color }}
-                >
-                  {article.source}
-                </span>
-                {article.publishedAt && (
-                  <span className="text-white/20 text-xs ml-auto">
-                    {new Date(article.publishedAt).toLocaleDateString()}
-                  </span>
-                )}
-              </div>
-              <h3 className="font-heading font-semibold text-white/90 text-sm mb-2 group-hover:text-white transition-colors leading-snug">
-                {article.title}
-              </h3>
-              <p className="text-white/50 text-xs leading-relaxed flex-1">
-                {article.summary}
-              </p>
-            </GlassCard>
-          ))}
+
+                {/* Text content */}
+                <div className="p-4 flex flex-col flex-1">
+                  <h3 className="font-heading font-semibold text-white/90 text-sm mb-2 group-hover:text-white transition-colors leading-snug">
+                    {article.title}
+                  </h3>
+                  <p className="text-white/50 text-xs leading-relaxed flex-1">
+                    {article.summary}
+                  </p>
+                  <div className="flex items-center gap-1.5 mt-3 text-white/30 group-hover:text-white/50 transition-colors">
+                    <ExternalLink size={10} />
+                    <span className="text-[10px]">Read article</span>
+                  </div>
+                </div>
+              </GlassCard>
+            )
+          })}
         </div>
       </div>
     </div>
