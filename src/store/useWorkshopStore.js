@@ -23,9 +23,6 @@ const useWorkshopStore = create(
       // Votes for priority ranking
       votes: {},
 
-      // Participant name (optional)
-      participantName: '',
-
       // Add a raw idea to a domain
       addIdea: (domainId, idea) =>
         set((state) => ({
@@ -36,7 +33,8 @@ const useWorkshopStore = create(
               {
                 id: Date.now() + Math.random(),
                 text: idea.text,
-                author: idea.author || 'Anonymous',
+                timeHorizon: idea.timeHorizon || 'near-term',
+                category: idea.category || 'product',
                 timestamp: new Date().toISOString(),
                 domainId,
               },
@@ -61,9 +59,6 @@ const useWorkshopStore = create(
             [ideaId]: !state.votes[ideaId],
           },
         })),
-
-      // Set participant name
-      setParticipantName: (name) => set({ participantName: name }),
 
       // Get all ideas across domains
       getAllIdeas: () => {

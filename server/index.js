@@ -80,7 +80,7 @@ app.get('/api/ideas/:domainId', (req, res) => {
 
 app.post('/api/ideas/:domainId', (req, res) => {
   const { domainId } = req.params
-  const { text, author } = req.body
+  const { text, timeHorizon, category } = req.body
 
   if (!text?.trim()) {
     return res.status(400).json({ error: 'Idea text is required' })
@@ -89,7 +89,8 @@ app.post('/api/ideas/:domainId', (req, res) => {
   const idea = {
     id: Date.now() + Math.random(),
     text: text.trim(),
-    author: author?.trim() || 'Anonymous',
+    timeHorizon: timeHorizon || 'near-term',
+    category: category || 'product',
     timestamp: new Date().toISOString(),
     domainId: Number(domainId),
   }
@@ -209,8 +210,21 @@ app.post('/api/ai/cleanup/:domainId', async (req, res) => {
   }
 
   try {
+    const categoryLabels = {
+      people: 'People & Culture',
+      process: 'Process & Operations',
+      product: 'Product & Innovation',
+      technology: 'Technology & Data',
+      distribution: 'Distribution & Partnerships',
+      customer: 'Customer Experience',
+    }
+
     const ideasText = ideas
-      .map((idea, i) => `${i + 1}. "${idea.text}" (by ${idea.author})`)
+      .map((idea, i) => {
+        const cat = categoryLabels[idea.category] || idea.category || 'Unspecified'
+        const horizon = idea.timeHorizon === 'long-term' ? '2028–2030' : '2026–2028'
+        return `${i + 1}. "${idea.text}" [Category: ${cat}, Horizon: ${horizon}]`
+      })
       .join('\n')
 
     const message = await client.messages.create({
@@ -221,23 +235,22 @@ app.post('/api/ai/cleanup/:domainId', async (req, res) => {
           role: 'user',
           content: `You are a senior strategic consultant advising Brighthouse Financial, a major life insurance and annuity company. You've been facilitating a workshop on "${domain.name}: ${domain.description}".
 
-Workshop participants have submitted the following raw ideas for what Brighthouse Financial should do in response to this domain:
+Workshop participants have submitted the following raw ideas. Each idea includes the participant's chosen business category and time horizon:
 
 ${ideasText}
 
 Please process these ideas as follows:
 1. Clean up the language — fix grammar, improve clarity, make each idea concise and actionable
 2. Remove duplicates and merge similar ideas
-3. Categorize each idea into a strategic theme (e.g., "Product Innovation", "Customer Experience", "Partnerships", "Digital Transformation", "Distribution", "Brand & Trust", etc.)
-4. Assign a time horizon: "near-term" (2026-2028) for quick wins and immediate actions, or "long-term" (2028-2030) for bigger bets and strategic shifts
-5. Add a brief strategic rationale (1 sentence) for why each idea matters
+3. Respect the participant's chosen category and time horizon. Only override if clearly mismatched.
+4. Add a brief strategic rationale (1 sentence) for why each idea matters
 
 Return your response as a JSON array with this structure:
 [
   {
     "originalIndex": 1,
     "cleanedText": "The refined idea text",
-    "category": "Strategic Theme",
+    "category": "The business category (use participant's choice)",
     "timeHorizon": "near-term" or "long-term",
     "rationale": "Why this matters for Brighthouse Financial",
     "priority": "high" or "medium" or "low"
@@ -311,11 +324,12 @@ io.on('connection', (socket) => {
   // Send current state to newly connected client
   socket.emit('syncState', workshopData)
 
-  socket.on('submitIdea', ({ domainId, text, author }) => {
+  socket.on('submitIdea', ({ domainId, text, timeHorizon, category }) => {
     const idea = {
       id: Date.now() + Math.random(),
       text: text.trim(),
-      author: author?.trim() || 'Anonymous',
+      timeHorizon: timeHorizon || 'near-term',
+      category: category || 'product',
       timestamp: new Date().toISOString(),
       domainId: Number(domainId),
     }
