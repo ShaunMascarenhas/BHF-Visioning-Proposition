@@ -465,17 +465,17 @@ export const workshopInfo = {
     {
       name: 'Hugh Tallents',
       role: 'Senior Partner',
-      image: '/images/hugh.jpg',
+      image: `${import.meta.env.BASE_URL}images/hugh.jpg`,
     },
     {
       name: 'Evan Duval',
       role: 'Senior Consultant',
-      image: '/images/evan.jpg',
+      image: `${import.meta.env.BASE_URL}images/evan.jpg`,
     },
     {
       name: 'Shaun Mascarenhas',
       role: 'Senior Consultant',
-      image: '/images/shaun.jpg',
+      image: `${import.meta.env.BASE_URL}images/shaun.jpg`,
     },
   ],
   agenda: [
