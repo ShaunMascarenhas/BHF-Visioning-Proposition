@@ -22,7 +22,7 @@ const slideVariants = {
   }),
 }
 
-export default function SlideContainer({ slides, domainColor = '#00e5ff' }) {
+export default function SlideContainer({ slides, domainColor = '#00B0B9' }) {
   const [[currentSlide, direction], setSlide] = useState([0, 0])
 
   const paginate = useCallback(
