@@ -18,7 +18,7 @@ const HORIZON_LABELS = {
 
 export default function IdeaCard({
   idea,
-  domainColor = '#00e5ff',
+  domainColor = '#00B0B9',
   index = 0,
   showVote = false,
 }) {

@@ -24,11 +24,11 @@ export default function Navigation() {
       className="fixed top-0 left-0 right-0 z-50"
     >
       <div className="glass-card mx-4 mt-4 px-6 py-3 flex items-center justify-between rounded-2xl"
-        style={{ background: 'rgba(5, 10, 26, 0.85)', backdropFilter: 'blur(20px)' }}
+        style={{ background: 'rgba(0, 23, 31, 0.85)', backdropFilter: 'blur(20px)' }}
       >
         {/* Logo area */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-electric-cyan to-vivid-purple flex items-center justify-center">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-bhf-teal to-bhf-dark-teal flex items-center justify-center">
             <span className="text-white font-heading font-bold text-sm">BF</span>
           </div>
           <span className="font-heading text-sm font-medium text-white/70 hidden md:block">
@@ -57,8 +57,8 @@ export default function Navigation() {
                     style={{
                       background: item.color
                         ? `linear-gradient(135deg, ${item.color}20, ${item.color}10)`
-                        : 'linear-gradient(135deg, rgba(0,229,255,0.15), rgba(139,92,246,0.1))',
-                      border: `1px solid ${item.color || '#00e5ff'}30`,
+                        : 'linear-gradient(135deg, rgba(0,176,185,0.15), rgba(0,70,90,0.1))',
+                      border: `1px solid ${item.color || '#00B0B9'}30`,
                     }}
                     transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                   />

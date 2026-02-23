@@ -7,8 +7,8 @@ export const domains = [
     title: 'The Human Side',
     subtitle:
       'The financial lives people are planning for are longer, more complex, and more anxiety-inducing than ever before',
-    color: '#00e5ff',
-    gradient: 'from-cyan-500 to-blue-600',
+    color: '#00B0B9',
+    gradient: 'from-bhf-teal to-bhf-dark-teal',
     icon: 'Heart',
     heroImage:
       'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1920&q=80',
@@ -120,8 +120,8 @@ export const domains = [
     title: 'The Technological Side',
     subtitle:
       'Technology is no longer just a cost-reduction function — it is the primary interface through which consumers experience financial services',
-    color: '#8b5cf6',
-    gradient: 'from-violet-500 to-purple-700',
+    color: '#753BBD',
+    gradient: 'from-bhf-violet to-purple-900',
     icon: 'Cpu',
     heroImage:
       'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80',
@@ -233,8 +233,8 @@ export const domains = [
     title: 'The Market Side',
     subtitle:
       'The economic environment has shifted from predictable to volatile — reshaping both what insurers can offer and what consumers demand',
-    color: '#ec4899',
-    gradient: 'from-pink-500 to-rose-600',
+    color: '#FA2F97',
+    gradient: 'from-bhf-fuchsia to-pink-800',
     icon: 'TrendingUp',
     heroImage:
       'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1920&q=80',
@@ -346,8 +346,8 @@ export const domains = [
     title: 'The Competitive Side',
     subtitle:
       'Simplicity, trust, and product innovation have overtaken product features as the primary battlegrounds',
-    color: '#f59e0b',
-    gradient: 'from-amber-500 to-orange-600',
+    color: '#FFC304',
+    gradient: 'from-bhf-gold to-bhf-orange',
     icon: 'Target',
     heroImage:
       'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80',

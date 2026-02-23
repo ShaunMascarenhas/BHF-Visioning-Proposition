@@ -17,7 +17,7 @@ const CATEGORIES = [
   { value: 'customer', label: 'Customer Experience' },
 ]
 
-export default function IdeaForm({ domainId, domainColor = '#00e5ff' }) {
+export default function IdeaForm({ domainId, domainColor = '#00B0B9' }) {
   const [text, setText] = useState('')
   const [timeHorizon, setTimeHorizon] = useState('')
   const [category, setCategory] = useState('')

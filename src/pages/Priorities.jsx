@@ -127,7 +127,7 @@ export default function Priorities() {
           className="mb-10"
         >
           <div className="flex items-center gap-3 mb-3">
-            <Target size={20} className="text-electric-cyan" />
+            <Target size={20} className="text-bhf-teal" />
             <p className="text-white/40 text-xs font-heading font-medium uppercase tracking-wider">
               Strategic Output
             </p>
@@ -157,11 +157,11 @@ export default function Priorities() {
               style={{
                 background:
                   viewMode === 'raw'
-                    ? 'linear-gradient(135deg, rgba(0,229,255,0.15), rgba(139,92,246,0.1))'
+                    ? 'linear-gradient(135deg, rgba(0,176,185,0.15), rgba(0,70,90,0.1))'
                     : 'rgba(255,255,255,0.03)',
                 color:
-                  viewMode === 'raw' ? '#00e5ff' : 'rgba(255,255,255,0.4)',
-                border: `1px solid ${viewMode === 'raw' ? 'rgba(0,229,255,0.3)' : 'rgba(255,255,255,0.08)'}`,
+                  viewMode === 'raw' ? '#00B0B9' : 'rgba(255,255,255,0.4)',
+                border: `1px solid ${viewMode === 'raw' ? 'rgba(0,176,185,0.3)' : 'rgba(255,255,255,0.08)'}`,
               }}
             >
               Raw Ideas
@@ -173,13 +173,13 @@ export default function Priorities() {
               style={{
                 background:
                   viewMode === 'cleaned'
-                    ? 'linear-gradient(135deg, rgba(139,92,246,0.2), rgba(236,72,153,0.15))'
+                    ? 'linear-gradient(135deg, rgba(0,70,90,0.2), rgba(0,176,185,0.15))'
                     : 'rgba(255,255,255,0.03)',
                 color:
                   viewMode === 'cleaned'
-                    ? '#8b5cf6'
+                    ? '#00465A'
                     : 'rgba(255,255,255,0.4)',
-                border: `1px solid ${viewMode === 'cleaned' ? 'rgba(139,92,246,0.3)' : 'rgba(255,255,255,0.08)'}`,
+                border: `1px solid ${viewMode === 'cleaned' ? 'rgba(0,70,90,0.3)' : 'rgba(255,255,255,0.08)'}`,
               }}
             >
               <span className="flex items-center gap-1.5">
@@ -197,9 +197,9 @@ export default function Priorities() {
               className="px-4 py-2 rounded-xl text-xs font-heading font-semibold flex items-center gap-2 transition-all disabled:opacity-30"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(0,229,255,0.15), rgba(139,92,246,0.15))',
-                border: '1px solid rgba(0,229,255,0.2)',
-                color: '#00e5ff',
+                  'linear-gradient(135deg, rgba(0,176,185,0.15), rgba(0,70,90,0.15))',
+                border: '1px solid rgba(0,176,185,0.2)',
+                color: '#00B0B9',
               }}
             >
               {isAnyProcessing ? (
@@ -248,13 +248,13 @@ export default function Priorities() {
             style={{
               background:
                 activeFilter === 'all'
-                  ? 'linear-gradient(135deg, rgba(0,229,255,0.15), rgba(139,92,246,0.1))'
+                  ? 'linear-gradient(135deg, rgba(0,176,185,0.15), rgba(0,70,90,0.1))'
                   : 'transparent',
               color:
                 activeFilter === 'all'
-                  ? '#00e5ff'
+                  ? '#00B0B9'
                   : 'rgba(255,255,255,0.3)',
-              border: `1px solid ${activeFilter === 'all' ? 'rgba(0,229,255,0.3)' : 'rgba(255,255,255,0.08)'}`,
+              border: `1px solid ${activeFilter === 'all' ? 'rgba(0,176,185,0.3)' : 'rgba(255,255,255,0.08)'}`,
             }}
           >
             All Domains ({totalIdeas})
@@ -296,13 +296,13 @@ export default function Priorities() {
                   style={{
                     background:
                       timeHorizon === horizon
-                        ? 'linear-gradient(135deg, rgba(0,229,255,0.15), rgba(139,92,246,0.1))'
+                        ? 'linear-gradient(135deg, rgba(0,176,185,0.15), rgba(0,70,90,0.1))'
                         : 'transparent',
                     color:
                       timeHorizon === horizon
-                        ? '#00e5ff'
+                        ? '#00B0B9'
                         : 'rgba(255,255,255,0.3)',
-                    border: `1px solid ${timeHorizon === horizon ? 'rgba(0,229,255,0.3)' : 'rgba(255,255,255,0.08)'}`,
+                    border: `1px solid ${timeHorizon === horizon ? 'rgba(0,176,185,0.3)' : 'rgba(255,255,255,0.08)'}`,
                   }}
                 >
                   {horizon === 'all' ? 'All Horizons' : horizon}
@@ -519,16 +519,16 @@ export default function Priorities() {
                                       style={{
                                         background:
                                           idea.timeHorizon === 'near-term'
-                                            ? 'rgba(0,229,255,0.1)'
-                                            : 'rgba(139,92,246,0.1)',
+                                            ? 'rgba(0,176,185,0.1)'
+                                            : 'rgba(0,70,90,0.1)',
                                         color:
                                           idea.timeHorizon === 'near-term'
-                                            ? '#00e5ff'
-                                            : '#8b5cf6',
+                                            ? '#00B0B9'
+                                            : '#00465A',
                                         border: `1px solid ${
                                           idea.timeHorizon === 'near-term'
-                                            ? 'rgba(0,229,255,0.2)'
-                                            : 'rgba(139,92,246,0.2)'
+                                            ? 'rgba(0,176,185,0.2)'
+                                            : 'rgba(0,70,90,0.2)'
                                         }`,
                                       }}
                                     >
@@ -593,14 +593,14 @@ export default function Priorities() {
                 </div>
                 <div className="w-px h-12 bg-white/10" />
                 <div className="text-center">
-                  <p className="font-heading text-3xl font-bold text-vivid-purple">
+                  <p className="font-heading text-3xl font-bold text-bhf-dark-teal">
                     {totalVotes}
                   </p>
                   <p className="text-white/40 text-xs mt-1">Votes Cast</p>
                 </div>
                 <div className="w-px h-12 bg-white/10" />
                 <div className="text-center">
-                  <p className="font-heading text-3xl font-bold text-hot-pink">
+                  <p className="font-heading text-3xl font-bold text-bhf-green">
                     {allCleanedIdeas.length}
                   </p>
                   <p className="text-white/40 text-xs mt-1">AI Processed</p>
